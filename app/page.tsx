@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CTAButton from "../components/CTAButton";
 import FeatureCard from "../components/FeatureCard";
 import { Calendar, ShieldCheck, ClipboardList, Home, Brush } from "lucide-react";
@@ -19,7 +20,7 @@ export default function Page() {
         </p>
 
         <div className="mt-6 flex items-center justify-center gap-3">
-          <CTAButton size="lg" variant="primaryGradient">Provider Dashboard</CTAButton>
+          <CTAButton size="lg" variant="primaryGradient">Book Now</CTAButton>
           <CTAButton size="lg" variant="soft">My Bookings</CTAButton>
         </div>
       </section>
@@ -96,7 +97,7 @@ export default function Page() {
               <li className="flex gap-2"><span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-cs-charcoal/70" /> Book instantly with flexible scheduling</li>
               <li className="flex gap-2"><span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-cs-charcoal/70" /> Secure payment and satisfaction guarantee</li>
             </ul>
-            <CTAButton className="w-full">Find Cleaners</CTAButton>
+            <CTAButton className="w-full" variant="primaryGradient">Find Cleaners</CTAButton>
           </div>
         </section>
       )}

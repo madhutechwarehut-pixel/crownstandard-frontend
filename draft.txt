@@ -9,5 +9,5 @@
     7. “How to Get Started” page (app/how-to-get-started/page.tsx) implemented with sections, steps, icons, FAQ.
     8. FAQ accordion upgraded with chevron toggle and section grouping.
     9. ESLint configured globally (disabled react/no-unescaped-entities), cleaned unused imports.
-    10. Production build completed successfully and prepared for push.
+    10. Production build completed successfully and prepared for push and Deployed the Project in the netlify.
 
