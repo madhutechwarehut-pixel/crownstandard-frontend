@@ -20,6 +20,14 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  // Global override: allow plain single quotes in JSX text across all files
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ];
+
 
 export default eslintConfig;

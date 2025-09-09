@@ -1,0 +1,13 @@
+09-09-2025
+
+    1. Project env set up (new repo, Next.js, TypeScript, ESLint rules).
+    2. TailwindCSS + PostCSS configured and working with brand CSS variables.
+    3. Global design tokens wired to Tailwind (bg-background, text-foreground, etc.).
+    4. Header component created and sized to match design.
+    5. Reusable CTAButton added; consistent lucide-react icon usage.
+    6. Home page (app/page.tsx) implemented per design.
+    7. “How to Get Started” page (app/how-to-get-started/page.tsx) implemented with sections, steps, icons, FAQ.
+    8. FAQ accordion upgraded with chevron toggle and section grouping.
+    9. ESLint configured globally (disabled react/no-unescaped-entities), cleaned unused imports.
+    10. Production build completed successfully and prepared for push.
+
