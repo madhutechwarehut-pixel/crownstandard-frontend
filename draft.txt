@@ -13,3 +13,28 @@
 
 
 mosaic-biz-hub : Built and refined Hero section with gradient + overlay, responsive text/buttons, and mobile-focused object-position fixes, Developed Need Cleaning section with image/content layout, checklist, gold divider, and responsive stacking, Implemented Header/NavBar responsive design with brand/logo, navigation links, and login buttons, Created reusable BannerSection component with breadcrumb, overlay, gradient, gold divider line, and responsive behavior, Completed Our Mission section with icon, heading, text, and layout matching design, Built For Customers & For Service Providers section with dual cards on a repeated background pattern, Designed Why Choose Crown Standard Features Grid with six feature cards, alternating dark/light/gold variants, and pattern placement, Added Stats Section using same banner background, overlays, and responsive counter-style cards, Implemented How Crown Standard Works section with two styled cards (dark + beige), numbered steps, gold divider, and icons, Completed Final CTA Section with dark background, corner patterns, centered title/subtitle, and action buttons.
+
+
+23-09-2025
+
+    1. Built dual onboarding columns (Customers & Providers) with step cards + aligned CTAs.
+    2. Added Important Info Band with background image, overlay, and info cards.
+    3. Created FAQ section with custom accordion + gold active header.
+    4. Designed Bottom CTA Banner with dark panel, line art, text + buttons, and cleaning person illustration.
+    5. Made cleaning model responsive with heights (340px / 350px / 380px) and head popping out of top.
+    6. Configured custom breakpoint (868px) so model only shows from ≥868px.
+    7. Fixed styling adjustments (borders, paddings, muted colors).
+    8. Index page Made Responsive and mobile Friendly.
+    9. about page Made Responsive and mobile Friendly.
+
+23-09
+
+    1. Created a dedicated **`(auth)` route group** with its own `layout.tsx`, so header and footer from the main site are not shown on login/register pages.
+    2. Implemented the **register page** with two-column layout: left marketing panel + right signup form card (role toggle, inputs, buttons, Google login, links).
+    3. Added **background gradient and top-right illustration support** to `(auth)/layout.tsx` for styling consistency.
+    4. Fixed gradient to stretch for the **entire page height** using `h-full` instead of `h-screen`.
+    5. Implemented the **login page** with left marketing panel + right card (role toggle, email/password inputs, sign-in button, Google login, forgot password link, register link).
+    6. Fixed the **`searchParams` console error** by making the login page server-safe and parsing query params without hooks.
+    7. Replaced placeholder emojis with **Lucide icons** (`ShieldCheck`, `Star`, `Users`) in the feature highlights list for a professional look.
+
+

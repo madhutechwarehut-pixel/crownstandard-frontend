@@ -20,6 +20,9 @@ module.exports = {
             maxWidth: {
                 content: "1150px",
             },
+            screens: {
+                '868': '868px', // 👈 custom breakpoint
+            },
         },
     },
     plugins: [],
