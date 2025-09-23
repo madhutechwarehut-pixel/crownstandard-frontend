@@ -50,30 +50,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/how-to-get-started": {
       "experimentalBypassFor": [
         {
@@ -97,13 +73,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "395d542914ee1204b77831767d028e5b",
-    "previewModeSigningKey": "9f580de61fc44b5ccd4d0bdfa430305f3293bffc237db3713de7c74f1ed6299b",
-    "previewModeEncryptionKey": "bfc5b709b321b28bd7aa341e74109d03c6636f37bdd50f6919ee89c11b1fa0a8"
+    "previewModeId": "079d057584864a9fa11a4d0a752ba90f",
+    "previewModeSigningKey": "0d37deea187c000116efada8ec36d4d95c6adbfc552bac773f50f5f56f7c91ed",
+    "previewModeEncryptionKey": "5a286280b1ba051fdd4dd3bf306c6b73361196b977a6cce3e6cce9a6b34bb744"
   }
 }

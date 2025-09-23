@@ -1,8 +1,7 @@
 // app/how-to-get-started/page.tsx
 import {
-    ShieldCheck, Users, UserPlus, Clock, FileCheck, Settings, HelpCircle,
+    ShieldCheck, Users, UserPlus, Clock, FileCheck, Settings,
     CheckCircle2, MapPin, CalendarDays, CreditCard, Star,
-    Info, Lock, Mail, Smartphone, Camera, Shield, ChevronDown
 } from "lucide-react";
 import Link from "next/link";
 import CTAButton from "@/components/CTAButton";
