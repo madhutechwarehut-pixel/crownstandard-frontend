@@ -2,46 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 43 25% 94%;
-  --foreground: 215 28% 17%;
-  --card: 0 0% 100%;
-  --card-foreground: 215 28% 17%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 215 28% 17%;
-  --primary: 215 28% 17%;
-  --primary-foreground: 43 25% 94%;
-  --secondary: 43 25% 94%;
-  --secondary-foreground: 215 28% 17%;
-  --muted: 43 15% 88%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 43 73% 57%;
-  --accent-foreground: 215 28% 17%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 43 25% 94%;
-  --border: 43 15% 85%;
-  --input: 43 15% 85%;
-  --ring: 43 73% 57%;
+:root { color-scheme: light; }
 
-  /* Brand aliases */
-  --crown-gold: 43 73% 57%;
-  --crown-navy: 215 28% 17%;
-  --crown-cream: 43 25% 94%;
-
-  --radius: 0.5rem;
-
-  /* Sidebar (optional) */
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 240 5.9% 10%;
-  --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 240 4.8% 95.9%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
-  --sidebar-border: 220 13% 91%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+.btn {
+  @apply inline-flex items-center gap-2 px-5 py-2 text-sm font-medium transition-shadow rounded-full shadow-soft hover:shadow-lg;
 }
-
-body{
-  padding: 0;
-  margin: 0;
+.btn-primary { @apply text-white bg-brand-gold; }
+.btn-dark { @apply text-white bg-brand-dark; }
+.btn-ghost { @apply bg-white border text-brand-dark border-black/10; }
+.section { @apply w-full py-14 md:py-20; }
+.container { @apply w-full px-4 mx-auto max-w-content; }
+.card {
+  @apply p-6 bg-white rounded-2xl shadow-soft md:p-8;
 }

@@ -1,50 +1,165 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close mobile menu on route change (optional: if using next/navigation you can listen to pathname)
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b border-cs-border">
-      <div className="mx-auto max-w-[80%] px-4 py-4 flex items-center justify-between">
-        {/* Brand */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded bg-cs-gold/20 border border-cs-border overflow-hidden grid place-items-center">
-            <Image
-              src="/logo.png"
-              alt="Crown Standard"
-              width={48}
-              height={48}
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="leading-tight">
-            <div className="font-bold text-cs-charcoal text-xl">Crown Standard</div>
-            <div className="text-sm text-cs-sub">Cleaning Co.</div>
-          </div>
-        </Link>
-
-        {/* Nav */}
-        <nav className="hidden md:flex items-center gap-9 text-base text-cs-charcoal">
-          <Link href="/" className="hover:text-cs-gold">Home</Link>
-          <Link href="/how-to-get-started" className="hover:text-cs-gold">Get Started</Link>
-          <Link href="#" className="hover:text-cs-gold">About</Link>
-          <Link href="#" className="hover:text-cs-gold">Services</Link>
-        </nav>
-
-        {/* Auth Buttons */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/login"
-            className="text-sm font-semibold px-4 py-2.5 rounded-md bg-primary text-primary-foreground hover:opacity-90 shadow-sm"
-          >
-            Customer Login
+    <header
+      className={`sticky top-0 z-50 border-b border-cs-border bg-white/80 backdrop-blur transition-shadow ${
+        scrolled ? "shadow-soft" : ""
+      }`}
+    >
+      <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        {/* Top row */}
+        <div className="flex items-center justify-between py-3">
+          {/* Brand */}
+          <Link href="/" className="flex items-center gap-3">
+            <div className="grid w-10 h-10 overflow-hidden border rounded border-cs-border bg-cs-gold/20 place-items-center sm:h-12 sm:w-12">
+              <Image
+                src="/logo.png"
+                alt="Crown Standard"
+                width={48}
+                height={48}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="leading-tight">
+              <div className="text-lg font-bold text-cs-charcoal sm:text-xl">
+                Crown Standard
+              </div>
+              <div className="text-xs text-cs-sub sm:text-sm">Cleaning Co.</div>
+            </div>
           </Link>
-          <Link
-            href="/provider/login"
-            className="text-sm font-medium px-4 py-2.5 rounded-md bg-white text-cs-charcoal border border-cs-border hover:bg-cs-gold"
+
+          {/* Desktop nav */}
+          <nav className="items-center hidden gap-8 text-base text-cs-charcoal lg:flex">
+            <Link href="/" className="hover:text-cs-gold">Home</Link>
+            <Link href="/how-to-get-started" className="hover:text-cs-gold">Get Started</Link>
+            <Link href="/about" className="hover:text-cs-gold">About</Link>
+            <Link href="#" className="hover:text-cs-gold">Services</Link>
+          </nav>
+
+          {/* Desktop auth */}
+          <div className="items-center hidden gap-3 lg:flex">
+            <Link
+              href="/login"
+              className="text-sm font-semibold px-4 py-2.5 rounded-full bg-slate-900 text-white hover:opacity-90 shadow-sm"
+            >
+              Customer Login
+            </Link>
+            <Link
+              href="/provider/login"
+              className="text-sm font-medium px-4 py-2.5 rounded-full bg-white text-cs-charcoal border border-cs-border hover:bg-cs-gold/20"
+            >
+              Provider Login
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex items-center justify-center w-10 h-10 border rounded-full lg:hidden border-cs-border text-cs-charcoal hover:bg-cs-gold/10"
           >
-            Provider Login
-          </Link>
+            <svg
+              className={`h-5 w-5 transition-transform ${open ? "rotate-90" : ""}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" />
+              ) : (
+                <>
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h16" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile menu (collapsible) */}
+        <div
+          className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
+            open ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="pt-1 pb-4">
+            <nav className="grid gap-2 text-cs-charcoal">
+              <Link
+                href="/"
+                className="px-3 py-2 rounded-lg hover:bg-cs-gold/10"
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/how-to-get-started"
+                className="px-3 py-2 rounded-lg hover:bg-cs-gold/10"
+                onClick={() => setOpen(false)}
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/about"
+                className="px-3 py-2 rounded-lg hover:bg-cs-gold/10"
+                onClick={() => setOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="#"
+                className="px-3 py-2 rounded-lg hover:bg-cs-gold/10"
+                onClick={() => setOpen(false)}
+              >
+                Services
+              </Link>
+            </nav>
+
+            <div className="grid gap-2 mt-3">
+              <Link
+                href="/login"
+                className="rounded-full px-4 py-2.5 text-center text-sm font-semibold bg-slate-900 text-white hover:opacity-90 shadow-sm"
+                onClick={() => setOpen(false)}
+              >
+                Customer Login
+              </Link>
+              <Link
+                href="/provider/login"
+                className="rounded-full px-4 py-2.5 text-center text-sm font-medium bg-white text-cs-charcoal border border-cs-border hover:bg-cs-gold/20"
+                onClick={() => setOpen(false)}
+              >
+                Provider Login
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>
