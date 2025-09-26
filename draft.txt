@@ -98,3 +98,14 @@ Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like foo
     12. Made discount code input + button responsive for mobile and desktop.
     13. Fixed Next.js build error by switching params to an async object and awaiting it.
 
+    1. Created the dashboard page skeleton (`app/dashboard/page.tsx`) with container `max-w-7xl`.
+    2. Implemented stat cards with Lucide icons (`Calendar`, `Star`, `DollarSign`, `Heart`) and fixed background gradient / circular overlay effect in the top-right corner.
+    3. Implemented quick action cards (“Book Service”, “My Bookings”, “Favourites”, “My Reviews”) with hover states and right-arrow button.
+    4. Added Recent Bookings section with heading, “View All” button, and card layout for each booking.
+    5. Built Empty State (dashed border, “No bookings yet. Ready to get started?” + CTA button).
+    6. Made rendering conditional → shows bookings only if present, otherwise shows empty state.
+    7. Created a dummy booking object (`Deluxe Apartment Cleaning`, New York, $30) to test the UI with real data instead of placeholders.
+    8. Started the Provider Dashboard with a tab bar (Overview, Bookings, Services, Availability, Rates, Earnings, GPS).
+    9. Built Overview tab for the Provider Dashboard: stat cards, action cards, recent bookings.
+    10. Refactored into modular components (TabBar, StatCard, ActionCard, RecentBookings) for cleaner structure.
+

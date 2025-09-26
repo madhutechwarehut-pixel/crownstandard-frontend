@@ -48,6 +48,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
       "page": "/how-to-get-started",
       "regex": "^/how\\-to\\-get\\-started(?:/)?$",
       "routeKeys": {},
@@ -58,6 +64,12 @@
       "regex": "^/login(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/provider/dashboard",
+      "regex": "^/provider/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/provider/dashboard(?:/)?$"
     },
     {
       "page": "/register",
