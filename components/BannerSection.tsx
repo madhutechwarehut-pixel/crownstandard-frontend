@@ -65,7 +65,10 @@ export default function BannerSection({ title, subtitle, imageUrl, page }: Banne
       </div>
 
       {/* gold line below */}
-      <div className="absolute bottom-[-48px] left-1/2 h-24 w-px -translate-x-1/2 bg-brand-gold" />
+      <div
+        className={`absolute bottom-[-48px] left-1/2 h-24 w-px -translate-x-1/2 ${page === "Services" ? "bg-white" : "bg-brand-gold"
+          }`}
+      />
     </section>
   );
 }

@@ -4,5 +4,7 @@
   "/(auth)/register/page": "/register",
   "/(home)/page": "/",
   "/(home)/about/page": "/about",
-  "/(home)/how-to-get-started/page": "/how-to-get-started"
+  "/(home)/how-to-get-started/page": "/how-to-get-started",
+  "/(home)/service/[serviceid]/page": "/service/[serviceid]",
+  "/(home)/services/page": "/services"
 }

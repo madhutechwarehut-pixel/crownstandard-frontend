@@ -58,19 +58,19 @@ export default function Header() {
             <Link href="/" className="hover:text-cs-gold">Home</Link>
             <Link href="/how-to-get-started" className="hover:text-cs-gold">Get Started</Link>
             <Link href="/about" className="hover:text-cs-gold">About</Link>
-            <Link href="#" className="hover:text-cs-gold">Services</Link>
+            <Link href="/services" className="hover:text-cs-gold">Services</Link>
           </nav>
 
           {/* Desktop auth */}
           <div className="items-center hidden gap-3 lg:flex">
             <Link
-              href="/login"
+              href="/login?type=customer"
               className="text-sm font-semibold px-4 py-2.5 rounded-full bg-slate-900 text-white hover:opacity-90 shadow-sm"
             >
               Customer Login
             </Link>
             <Link
-              href="/provider/login"
+              href="/login?type=provider"
               className="text-sm font-medium px-4 py-2.5 rounded-full bg-white text-cs-charcoal border border-cs-border hover:bg-cs-gold/20"
             >
               Provider Login
@@ -135,7 +135,7 @@ export default function Header() {
                 About
               </Link>
               <Link
-                href="#"
+                href="/services"
                 className="px-3 py-2 rounded-lg hover:bg-cs-gold/10"
                 onClick={() => setOpen(false)}
               >
@@ -145,14 +145,14 @@ export default function Header() {
 
             <div className="grid gap-2 mt-3">
               <Link
-                href="/login"
+                href="/login?type=customer"
                 className="rounded-full px-4 py-2.5 text-center text-sm font-semibold bg-slate-900 text-white hover:opacity-90 shadow-sm"
                 onClick={() => setOpen(false)}
               >
                 Customer Login
               </Link>
               <Link
-                href="/provider/login"
+                href="/login?type=provider"
                 className="rounded-full px-4 py-2.5 text-center text-sm font-medium bg-white text-cs-charcoal border border-cs-border hover:bg-cs-gold/20"
                 onClick={() => setOpen(false)}
               >

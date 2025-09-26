@@ -29,12 +29,72 @@ mosaic-biz-hub : Built and refined Hero section with gradient + overlay, respons
 
 23-09
 
-    1. Created a dedicated **`(auth)` route group** with its own `layout.tsx`, so header and footer from the main site are not shown on login/register pages.
-    2. Implemented the **register page** with two-column layout: left marketing panel + right signup form card (role toggle, inputs, buttons, Google login, links).
-    3. Added **background gradient and top-right illustration support** to `(auth)/layout.tsx` for styling consistency.
-    4. Fixed gradient to stretch for the **entire page height** using `h-full` instead of `h-screen`.
-    5. Implemented the **login page** with left marketing panel + right card (role toggle, email/password inputs, sign-in button, Google login, forgot password link, register link).
-    6. Fixed the **`searchParams` console error** by making the login page server-safe and parsing query params without hooks.
-    7. Replaced placeholder emojis with **Lucide icons** (`ShieldCheck`, `Star`, `Users`) in the feature highlights list for a professional look.
+    1. Created a dedicated (auth) route group with its own layout.tsx, so header and footer from the main site are not shown on login/register pages.
+    2. Implemented the register page with two-column layout: left marketing panel + right signup form card (role toggle, inputs, buttons, Google login, links).
+    3. Added background gradient and top-right illustration support to (auth)/layout.tsx for styling consistency.
+    4. Fixed gradient to stretch for the entire page height using h-full instead of h-screen.
+    5. Implemented the login page with left marketing panel + right card (role toggle, email/password inputs, sign-in button, Google login, forgot password link, register link).
+    6. Fixed the searchParams console error by making the login page server-safe and parsing query params without hooks.
+    7. Replaced placeholder emojis with Lucide icons (ShieldCheck, Star, Users) in the feature highlights list for a professional look.
 
+24-09-2025 (not listed)
+
+    1. Implemented ServiceCard with dynamic pricing, provider, rating, and booking functionality.
+    2. Added search and filter functionality with tabs, price slider, rating dropdown, and sorting options.
+    3. Applied background colors and styling to match the Figma design, including yellow divider and action sections.
+    4. Added a search bar for filtering services based on title, location, or provider.
+    5. Created Hide/Show filter toggle for responsive design.
+    6. Adjusted Service Card layout with correct provider, rating, review count, price, and CTA button.
+    7. Implemented skeleton loader for service cards and displayed "No services found" when no results match.
+    8. Added conditional background for the vertical divider depending on the page.
+    9. Connected search input to dynamically filter services.
+    10. Adjusted container width to max-w-7xl or max-w-8xl based on design reference.
+    11. Applied padding adjustments for a spacious layout.
+    12. Updated the filter section with tabs, input row, and service filters.
+
+24-09
+
+    1. gone through the email and all the docs given.
+    2. Created flowchart for CAT Exam Showcasing the flow of how user Interacts with the CAT System.
+    3. Craeted chart for ADMIN and STUDENT high level features
+    4. Researched on LMS And CAT Documented low level features of it.
+    5. How To Get Started page Made Responsive and Mobile Friendly.
+    6. Extracted the Design of provider/profile/:providerId , /my-bookings, /favorites, /reviews, /notifications and given to Figma Desginer - Crownstandard
+    7. Unlocked admin Specific designs.
+
+LMS : gone through the email and all the docs given, Created flowchart for CAT Exam Showcasing the flow of how user Interacts with the CAT System, Craeted chart for ADMIN and STUDENT high level feature, Researched on LMS And CAT Documented low level features of it, How To Get Started page Made Responsive and Mobile Friendly, , Crownstandard :  Extracted the Design of provider/profile/:providerId , /my-bookings, /favorites, /reviews, /notifications and given to Figma Desginer, Unlocked admin Specific designs.
+
+
+25-09-2025
+
+    1. Created Service Title & Description Section with dynamic content and responsive layout.
+    2. Added Service Notice Section with additional service information.
+    3. Implemented Important Disclaimer Section with appropriate styling.
+    4. Addressed the image display issue using next/image with layout="fill" and object-cover.
+    5. Ensured the image fills the container properly by defining height and width of the parent container.
+    6. Created Service detail page with bookings deatils form only.
+    7. made everything mobile Responsicve
+
+
+
+
+Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like food from farm, according to rakesh sir, Resolved github size limit upload in in single push limit casued to .next folder. Project : CrownStandard Created a dedicated (auth) route group with its own layout.tsx, so header and footer from the main site are not shown on login/register pages, Implemented the register page with two-column layout: left marketing panel + right signup form card (role toggle, inputs, buttons, Google login, links), Meet with Rakesh sir regarding mosaic-biz-hub and LMS Project.
+
+
+
+26-09-2025
+
+    1. Created Service types in @/types/service with dummy data and helpers.
+    2. Implemented ServiceOverviewCard component using Figma design.
+    3. Built BookingDetails form with date, time, duration, address, instructions, discount code, and pricing summary.
+    4. Fixed <select> placeholder behavior with controlled/uncontrolled patterns.
+    5. Added Property Information section with square footage, entry method, notes, etc.
+    6. Added Photo Uploads section with UploadBox (initial dummy UI).
+    7. Upgraded UploadBox to real multiple file upload with preview and remove option.
+    8. Unified booking + property info + uploads into one form layout.
+    9. Improved LabeledInput for responsive behavior.
+    10. Fixed responsive grid layout using minmax for booking form and summary panel.
+    11. Implemented split beige + dark background section with gradient and overlap fixes.
+    12. Made discount code input + button responsive for mobile and desktop.
+    13. Fixed Next.js build error by switching params to an async object and awaiting it.
 
