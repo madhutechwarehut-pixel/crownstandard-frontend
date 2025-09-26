@@ -163,25 +163,25 @@ function OverviewTab() {
                     title="Active Services"
                     value="0"
                     subtitle="Service listings"
-                    icon={<Calendar className="w-6 h-6 text-amber-700" />}
+                    icon={<Calendar className="w-10 h-10 text-amber-700" />}
                 />
                 <StatCard
                     title="Active Bookings"
                     value="0"
                     subtitle="Confirmed & in progress"
-                    icon={<Star className="w-6 h-6 text-amber-700" />}
+                    icon={<Star className="w-10 h-10 text-amber-700" />}
                 />
                 <StatCard
                     title="Monthly Earnings"
                     value="$0.00"
                     subtitle="75% after platform fee + 100% of tips (paid daily)"
-                    icon={<DollarSign className="w-6 h-6 text-amber-700" />}
+                    icon={<DollarSign className="w-10 h-10 text-amber-700" />}
                 />
                 <StatCard
                     title="Average Rate"
                     value="0"
                     subtitle="Your hourly rate"
-                    icon={<Heart className="w-6 h-6 text-amber-700" />}
+                    icon={<Heart className="w-10 h-10 text-amber-700" />}
                 />
             </section>
 
