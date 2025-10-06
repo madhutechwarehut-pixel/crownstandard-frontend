@@ -37,7 +37,7 @@ mosaic-biz-hub : Built and refined Hero section with gradient + overlay, respons
     6. Fixed the searchParams console error by making the login page server-safe and parsing query params without hooks.
     7. Replaced placeholder emojis with Lucide icons (ShieldCheck, Star, Users) in the feature highlights list for a professional look.
 
-24-09-2025 (not listed)
+24-09-2025 
 
     1. Implemented ServiceCard with dynamic pricing, provider, rating, and booking functionality.
     2. Added search and filter functionality with tabs, price slider, rating dropdown, and sorting options.
@@ -52,7 +52,7 @@ mosaic-biz-hub : Built and refined Hero section with gradient + overlay, respons
     11. Applied padding adjustments for a spacious layout.
     12. Updated the filter section with tabs, input row, and service filters.
 
-24-09
+24-09 (not listed)
 
     1. gone through the email and all the docs given.
     2. Created flowchart for CAT Exam Showcasing the flow of how user Interacts with the CAT System.
@@ -108,4 +108,30 @@ Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like foo
     8. Started the Provider Dashboard with a tab bar (Overview, Bookings, Services, Availability, Rates, Earnings, GPS).
     9. Built Overview tab for the Provider Dashboard: stat cards, action cards, recent bookings.
     10. Refactored into modular components (TabBar, StatCard, ActionCard, RecentBookings) for cleaner structure.
+
+
+06-10-2025
+
+    1. Created full Provider Dashboard layout with header, tabs, and content sections.
+    2. Added triangular indicator below the active tab.
+    3. Made tabs horizontally scrollable on mobile.
+    4. Implemented URL-synced tab navigation using query parameters.
+    5. Enabled tab persistence on page reload.
+    6. Added support for back and forward browser navigation.
+    7. Ensured design consistency across all tabs (Bookings, Services, Availability, Rates, Earnings, GPS).
+    8. Built and styled all tab content sections as per Figma (with responsive layouts).
+    9. Integrated mock data and placeholder states for empty sections.
+    10. Maintained unified color scheme, spacing, and rounded aesthetics across the dashboard.
+    11. Created and SubsLayout base layouts with proper background and illustration placement.
+    12. Set up overall structure for the subscription module under /app/(subs)/choose-plan.
+    13. Implemented full Choose Your Plan page matching the design.
+    14. Added gradient background (#1F2937 → #524A39 → #1F2937).
+    15. Built responsive 3-column plan cards (Basic, Premium, Enterprise).
+    16. Highlighted the center “Premium” card with darker gradient and scale effect.
+    17. Styled typography, icons, and buttons to match design hierarchy.
+    18. Added footer section with sign-in prompt and amber button.
+    19. Built “Manage Services” page layout and linked it via “View All” button.
+    20. Created responsive, centered modal component for “Create New Service.
+    21. Designed “Profile Page” structure for Provider and Customer roles.
+
 

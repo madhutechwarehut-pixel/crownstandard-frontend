@@ -2,11 +2,15 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
   "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/(subs)/choose-plan/page": "app/(subs)/choose-plan/page.js",
   "/(home)/about/page": "app/(home)/about/page.js",
   "/(home)/dashboard/page": "app/(home)/dashboard/page.js",
-  "/(home)/page": "app/(home)/page.js",
   "/(home)/how-to-get-started/page": "app/(home)/how-to-get-started/page.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/(home)/profile/page": "app/(home)/profile/page.js",
+  "/(home)/provider/dashboard/manage-service/page": "app/(home)/provider/dashboard/manage-service/page.js",
   "/(home)/provider/dashboard/page": "app/(home)/provider/dashboard/page.js",
+  "/(home)/provider/profile/page": "app/(home)/provider/profile/page.js",
   "/(home)/service/[serviceid]/page": "app/(home)/service/[serviceid]/page.js",
   "/(home)/services/page": "app/(home)/services/page.js"
 }

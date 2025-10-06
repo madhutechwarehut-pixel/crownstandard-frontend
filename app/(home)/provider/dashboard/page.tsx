@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import {
     Calendar,
@@ -14,6 +15,12 @@ import {
 } from "lucide-react";
 import StatCard from "@/components/dashboard/StatCard"
 import ActionCard from "@/components/dashboard/ActionCard"
+import BookingSection from "@/components/bookings/BookingSection";
+import ServiceSection from "@/components/services/ServiceSection";
+import AvailabilitySection from "@/components/availability/AvailabilitySection";
+import RatesSection from "@/components/rates/RatesSection";
+import EarningsSection from "@/components/earnings/EarningsSection";
+import GpsTrackingSection from "@/components/gps/GpsTrackingSection";
 
 type TabKey =
     | "overview"
@@ -66,7 +73,19 @@ const bookings: Booking[] = [
 ];
 
 export default function ProviderDashboard() {
-    const [tab, setTab] = useState<TabKey>("overview");
+    const router = useRouter();
+    const searchParams = useSearchParams();
+
+
+    const initialTab = (searchParams.get("tab") as TabKey) || "overview";
+    const [tab, setTab] = useState<TabKey>(initialTab);
+
+    useEffect(() => {
+        const currentTab = (searchParams.get("tab") as TabKey) || "overview";
+        if (currentTab !== tab) setTab(currentTab);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchParams]);
+
 
     return (
         <main className="relative min-h-screen bg-white">
@@ -80,60 +99,47 @@ export default function ProviderDashboard() {
                 </header>
 
                 {/* Tabs */}
-                <nav className="flex flex-wrap justify-between gap-3 mb-8">
+                <nav className="flex flex-wrap justify-between gap-3 mb-3">
                     {TABS.map((t) => {
                         const active = tab === t.key;
                         return (
-                            <button
-                                key={t.key}
-                                onClick={() => setTab(t.key)}
-                                className={[
-                                    "px-5 py-2 md:px-10 rounded-md text-sm font-medium border transition",
-                                    active
-                                        ? "bg-gray-900 text-white border-gray-900 shadow-sm"
-                                        : "bg-amber-600/80 text-white hover:bg-amber-700",
-                                ].join(" ")}
-                            >
-                                {t.label}
-                            </button>
+                            <div key={t.key} className="relative">
+                                <button
+                                    onClick={() => {
+                                        setTab(t.key);
+                                        router.push(`/provider/dashboard?tab=${t.key}`, { scroll: false });
+                                    }}
+                                    className={[
+                                        "px-5 py-2 md:px-10 rounded-md text-sm font-medium border transition relative",
+                                        active
+                                            ? "bg-gray-900 text-white border-gray-900 shadow-sm"
+                                            : "bg-amber-600/80 text-white hover:bg-amber-700",
+                                    ].join(" ")}
+                                >
+                                    {t.label}
+                                </button>
+
+                                {active && (
+                                    <div
+                                        className="absolute left-1/2 -bottom-1 w-0 h-0 -translate-x-1/2 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-gray-900"
+                                    />
+                                )}
+                            </div>
+
                         );
                     })}
                 </nav>
+                <hr className="mb-8" />
 
                 {/* Content */}
                 {tab === "overview" && <OverviewTab />}
 
-                {tab === "bookings" && (
-                    <Placeholder title="Bookings">
-                        Filters, list/table of booking requests, status chips, actions
-                        (Confirm / Complete / Message).
-                    </Placeholder>
-                )}
-                {tab === "services" && (
-                    <Placeholder title="Services">
-                        Grid/list of services, Add/Edit, set rates, toggle active.
-                    </Placeholder>
-                )}
-                {tab === "availability" && (
-                    <Placeholder title="Availability">
-                        Weekly calendar, timeslots, exceptions/blackout dates.
-                    </Placeholder>
-                )}
-                {tab === "rates" && (
-                    <Placeholder title="Rates">
-                        Hourly/base rates, add-ons, discounts, promo codes.
-                    </Placeholder>
-                )}
-                {tab === "earnings" && (
-                    <Placeholder title="Earnings">
-                        Monthly earnings summary, payouts, charts, downloadable statements.
-                    </Placeholder>
-                )}
-                {tab === "gps" && (
-                    <Placeholder title="GPS Tracking">
-                        Map with last-known location, route history, on-the-way status.
-                    </Placeholder>
-                )}
+                {tab === "bookings" && <BookingSection />}
+                {tab === "services" && <ServiceSection />}
+                {tab === "availability" && <AvailabilitySection />}
+                {tab === "rates" && <RatesSection />}
+                {tab === "earnings" && <EarningsSection />}
+                {tab === "gps" && <GpsTrackingSection />}
             </div>
 
             <div className="absolute bottom-0 w-full h-64 bg-gray-900" />

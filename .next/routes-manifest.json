@@ -48,6 +48,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/choose-plan",
+      "regex": "^/choose\\-plan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/choose\\-plan(?:/)?$"
+    },
+    {
       "page": "/dashboard",
       "regex": "^/dashboard(?:/)?$",
       "routeKeys": {},
@@ -66,10 +72,28 @@
       "namedRegex": "^/login(?:/)?$"
     },
     {
+      "page": "/profile",
+      "regex": "^/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/profile(?:/)?$"
+    },
+    {
       "page": "/provider/dashboard",
       "regex": "^/provider/dashboard(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/provider/dashboard(?:/)?$"
+    },
+    {
+      "page": "/provider/dashboard/manage-service",
+      "regex": "^/provider/dashboard/manage\\-service(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/provider/dashboard/manage\\-service(?:/)?$"
+    },
+    {
+      "page": "/provider/profile",
+      "regex": "^/provider/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/provider/profile(?:/)?$"
     },
     {
       "page": "/register",

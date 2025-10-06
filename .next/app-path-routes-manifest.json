@@ -2,11 +2,15 @@
   "/_not-found/page": "/_not-found",
   "/(auth)/login/page": "/login",
   "/(auth)/register/page": "/register",
+  "/(subs)/choose-plan/page": "/choose-plan",
   "/(home)/about/page": "/about",
   "/(home)/dashboard/page": "/dashboard",
-  "/(home)/page": "/",
   "/(home)/how-to-get-started/page": "/how-to-get-started",
+  "/(home)/page": "/",
+  "/(home)/profile/page": "/profile",
+  "/(home)/provider/dashboard/manage-service/page": "/provider/dashboard/manage-service",
   "/(home)/provider/dashboard/page": "/provider/dashboard",
+  "/(home)/provider/profile/page": "/provider/profile",
   "/(home)/service/[serviceid]/page": "/service/[serviceid]",
   "/(home)/services/page": "/services"
 }
