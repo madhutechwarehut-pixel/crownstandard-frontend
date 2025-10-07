@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container">
             <div className="max-w-5xl px-4 mx-auto text-center text-white">
-              <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl">
                 Welcome to Crown Standard
               </h1>
               <p className="mt-4 text-sm sm:text-base md:text-lg text-white/90">
