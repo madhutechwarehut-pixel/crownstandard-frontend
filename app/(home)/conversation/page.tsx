@@ -58,7 +58,7 @@ export default function ConversationIndexPage() {
 
         {/* Empty state (no chat open) */}
         <div className="flex-1 border border-gray-100 rounded-xl">
-          <div className="grid h-full p-10 text-center place-items-center">
+          <div className="grid h-full p-10 text-center place-items-center md:display-block hidden">
             <div className="hidden md:block">
               <p className="text-lg font-medium text-gray-700">No conversation selected</p>
               <p className="mt-1 text-sm text-gray-500">

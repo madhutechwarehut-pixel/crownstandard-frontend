@@ -1,3 +1,4 @@
 {
-  "/(home)/conversation/[id]/page": "app/(home)/conversation/[id]/page.js"
+  "/(home)/conversation/[id]/page": "app/(home)/conversation/[id]/page.js",
+  "/(home)/conversation/page": "app/(home)/conversation/page.js"
 }

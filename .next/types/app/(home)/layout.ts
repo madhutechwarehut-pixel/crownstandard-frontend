@@ -1,4 +1,4 @@
-// File: C:\Users\DAY\OneDrive\Desktop\crownstandard\crownstandard-frontend\app\(home)\layout.tsx
+// File: C:\Users\Day\Desktop\New folder\crownstandard-frontend\app\(home)\layout.tsx
 import * as entry from '../../../../app/(home)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
