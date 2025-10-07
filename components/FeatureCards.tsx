@@ -41,7 +41,7 @@ function FeatureCard({
 }) {
   return (
     <article
-      className={`relative rounded-[22px] p-6 md:p-10 shadow-soft ${
+      className={`relative rounded-[18px] md:rounded-[22px] p-3 md:p-4 lg:p-8 shadow-soft ${
         dark ? "bg-brand-dark text-white" : "bg-white"
       }`}
     >
@@ -49,7 +49,7 @@ function FeatureCard({
 
       {/* big icon tile */}
       <div
-        className={`inline-flex h-16 w-16 items-center justify-center rounded-lg md:h-20 md:w-20 ${
+        className={`inline-flex h-16 w-16 items-center justify-center rounded-lg lg:h-20 lg:w-20 p-3 ${
           dark ? "bg-brand-gold text-white" : "bg-brand-gold text-white"
         }`}
       >
@@ -57,9 +57,9 @@ function FeatureCard({
       </div>
 
       <h3
-        className={`mt-6 font-semibold leading-tight ${
+        className={`mt-8 font-semibold leading-tight ${
           dark ? "text-white" : "text-slate-900"
-        } text-xl md:text-3xl`}
+        } text-xl  md:text-2xl lg:text-3xl`}
       >
         {title}
       </h3>
@@ -99,7 +99,7 @@ export default function FeatureCards() {
       <div className="absolute inset-x-0 h-full bg-brand-gold -z-10" />
 
       {/* pull cards upward to overlap the band */}
-      <div className="grid gap-6 p-5 pb-10 mx-auto -mt-16 max-w-7xl md:-mt-20 md:grid-cols-3">
+      <div className="grid gap-4 lg:gap-6 p-5 pb-10 mx-auto -mt-16 max-w-7xl md:-mt-20 sm:grid-cols-2 md:grid-cols-3">
         <FeatureCard
           title="Quick Booking"
           desc="Book your cleaning service in just 3 steps. Select date, time, and preferences."

@@ -20,13 +20,13 @@ export default function BannerSection({ title, subtitle, imageUrl, page }: Banne
         </nav>
 
         {/* title */}
-        <h1 className="mt-3 text-2xl font-extrabold md:text-4xl lg:text-5xl drop-shadow-md">
+        <h1 className="mt-3 text-2xl font-bold md:text-4xl lg:text-5xl drop-shadow-md">
           {title}
         </h1>
 
         {/* subtitle */}
         {subtitle && (
-          <p className="max-w-3xl mx-auto mt-4 text-sm leading-relaxed text-white/85 sm:text-base md:text-lg">
+          <p className="max-w-3xl mx-auto lg:mt-4 text-sm lg:text-lg leading-relaxed text-white/85 sm:text-base">
             {subtitle}
           </p>
         )}
