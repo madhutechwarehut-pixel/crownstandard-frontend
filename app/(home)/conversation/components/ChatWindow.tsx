@@ -39,13 +39,15 @@ export default function ChatWindow({ chat }: { chat: Chat }) {
             className={`flex ${m.sender === "me" ? "justify-end" : "justify-start"}`}
           >
             <div
-              className={`relative max-w-md px-4 py-3 text-sm rounded-md ${
-                m.sender === "me"
-                  ? "bg-gray-900 text-white rounded-tr-none"
-                  : "bg-gray-100 text-gray-800 rounded-tl-none"
-              }`}
+              className={`relative max-w-md px-4 py-3 text-sm rounded-lg ${m.sender === "me"
+                  ? // ===== Sender bubble =====
+                  "bg-[#1D2432] text-white before:content-[''] before:absolute before:top-0 before:right-[-8px] before:w-0 before:h-0 before:border-t-[10px] before:border-t-[#1D2432] before:border-r-[10px] before:border-r-transparent rounded-tr-none"
+                  : // ===== Receiver bubble =====
+                  "bg-[#F3F1ED] text-gray-800 before:content-[''] before:absolute before:top-0 before:left-[-8px] before:w-0 before:h-0 before:border-t-[10px] before:border-t-[#F3F1ED] before:border-l-[10px] before:border-l-transparent rounded-tl-none"
+                }`}
             >
               {m.text}
+
               {!m.seen && (
                 <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] px-1 rounded">
                   New
@@ -54,6 +56,7 @@ export default function ChatWindow({ chat }: { chat: Chat }) {
             </div>
           </div>
         ))}
+
       </div>
 
       {/* Input */}
