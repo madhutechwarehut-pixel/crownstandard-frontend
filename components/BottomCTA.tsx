@@ -24,9 +24,9 @@ export default function BottomCTA() {
                     />
 
                     {/* Content row */}
-                    <div className="relative z-10 flex flex-col items-center gap-8 px-6 py-8 pb-0 sm:px-8 sm:py-10 868:flex-row 868:items-end 868:justify-between 868:gap-10 868:pl-24 868:pr-10 868:py-14 sm:pb-0 sm:justify-center sm:items-center">
+                    <div className="relative z-10 flex flex-col items-center gap-8 px-6 py-8 pb-0 sm:px-8 sm:py-10 sm:flex-row 868:items-end sm:justify-between 868:gap-10 868:pl-24 868:pr-10 868:py-14 sm:pb-0 sm:justify-center sm:items-center">
                         {/* Left: icon + copy + buttons */}
-                        <div className="max-w-3xl md:max-w-xl">
+                        <div className="max-w-3xl md:max-w-xl md:pb-6 lg:pb-0">
                             <div className="mb-4 inline-grid h-10 w-10 place-items-center rounded-md bg-[#BB9239] sm:h-11 sm:w-11">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ export default function BottomCTA() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-xl font-extrabold tracking-tight sm:text-2xl md:text-3xl">
+                            <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
                                 Still have questions?
                             </h2>
                             <p className="max-w-xl mt-2 text-sm text-white/80 sm:text-base">
@@ -64,7 +64,7 @@ export default function BottomCTA() {
 
                         {/* Right: cleaning model */}
                         {/* Mobile: inline image below content */}
-                        <div className="self-center w-full max-w-xs sm:max-w-sm 868:hidden">
+                        <div className="self-center w-full md:w-50 max-w-xs sm:max-w-sm 868:hidden md:absolute md:bottom-0 md:right-[-40px]">
                             <Image
                                 src="/cleaning-person.png"
                                 alt="Cleaning person"
