@@ -1,10 +1,12 @@
 // components/ServiceCard.tsx
 import Image from "next/image";
 import { renderStars } from "@/utils/renderStars";
+import Link from "next/link";
 
 type Service = {
     id: number;
     title: string;
+    slug: string;
     description: string;
     price: number;
     duration: string;
@@ -72,9 +74,13 @@ export default function ServiceCard({ service }: { service: Service }) {
                     </div>
                 </div>
 
-                <button className="w-full py-2 mt-4 font-medium text-white bg-gray-900 rounded-lg hover:bg-black">
+
+                <Link
+                    href={`/service/${service.slug}`}
+                    className="block w-full py-2 mt-4 font-medium text-center text-white bg-gray-900 rounded-lg hover:bg-black"
+                >
                     Book This Service
-                </button>
+                </Link>
             </div>
         </article>
     );

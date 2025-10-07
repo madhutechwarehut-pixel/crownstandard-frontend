@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import {
@@ -72,7 +72,18 @@ const bookings: Booking[] = [
     },
 ];
 
-export default function ProviderDashboard() {
+
+export default function ProviderDashboardPage() {
+    return (
+        <Suspense fallback={<div className="flex items-center justify-center w-screen h-screen text-center">Loading dashboard...</div>}>
+            <ProviderDashboard />
+        </Suspense>
+    );
+}
+
+
+
+function ProviderDashboard() {
     const router = useRouter();
     const searchParams = useSearchParams();
 

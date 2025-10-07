@@ -10,6 +10,7 @@ import ServiceCardSkeleton from "@/components/ServiceCardSkeleton";
 type Service = {
     id: number;
     title: string;
+    slug: string;
     description: string;
     price: number;
     duration: string;
@@ -35,6 +36,7 @@ const SERVICES: Service[] = [
     {
         id: 1,
         title: "Deluxe Apartment Cleaning",
+        slug: "Deluxe-Apartment-Cleaning",
         description:
             "Thorough cleaning for apartments, including kitchen, bathroom, and living areas. Perfect ...",
         price: 30,
@@ -49,6 +51,7 @@ const SERVICES: Service[] = [
     {
         id: 2,
         title: "Deluxe Apartment Cleaning",
+        slug: "Deluxe-Apartment-Cleaning-1",
         description:
             "Thorough cleaning for apartments, including kitchen, bathroom, and living areas. Perfect ...",
         price: 30,
@@ -63,6 +66,7 @@ const SERVICES: Service[] = [
     {
         id: 3,
         title: "Deluxe Apartment Cleaning",
+        slug: "Deluxe-Apartment-Cleaning-2",
         description:
             "Thorough cleaning for apartments, including kitchen, bathroom, and living areas. Perfect ...",
         price: 30,
@@ -223,11 +227,11 @@ export default function ServicesPage() {
                                 <div className="md:col-span-1">
                                     <div className="flex items-center justify-between mb-1">
                                         <span className="text-sm text-gray-600">Price Range (per hour)</span>
-                                        <span className="text-xs text-gray-500">${20} — ${price}</span>
+                                        <span className="text-xs text-gray-500">${25} — ${price}</span>
                                     </div>
                                     <input
                                         type="range"
-                                        min={20}
+                                        min={25}
                                         max={200}
                                         step={10}
                                         value={price}
@@ -235,7 +239,7 @@ export default function ServicesPage() {
                                         className="w-full accent-gray-900"
                                     />
                                     <div className="flex justify-between text-[11px] text-gray-500">
-                                        <span>$20</span>
+                                        <span>$25</span>
                                         <span>$200</span>
                                     </div>
                                 </div>
