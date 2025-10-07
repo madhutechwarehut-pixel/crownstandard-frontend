@@ -137,4 +137,14 @@ Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like foo
 
 07-10-2025
 
-    1. Encountered Next.js error related to useSearchParams() requiring a Suspense boundary, Identified and provided fix by wrapping ProviderDashboard in a <Suspense> boundary inside page.tsx.
+    1. Implemented conversation layout with Next.js + TypeScript + Tailwind.
+    2. Added sidebar chat list and main chat window layout.
+    3. Ensured chat switching via `/conversation/[id]` route.
+    4. Fixed Next.js async params issue using `await props.params`.
+    5. Highlighted the active chat in the chat list.
+    6. Made chat list scrollable without scrolling the entire page.
+    7. Hid scrollbar for chat list using custom CSS.
+    8. Applied same hidden-scroll behavior to chat window messages.
+    9. Ensured full-page layout stays fixed (no browser scroll).
+    10. Added dedicated empty-state screen when no conversations exist.
+    11. Encountered Next.js error related to useSearchParams() requiring a Suspense boundary, Identified and provided fix by wrapping ProviderDashboard in a <Suspense> boundary inside page.tsx.

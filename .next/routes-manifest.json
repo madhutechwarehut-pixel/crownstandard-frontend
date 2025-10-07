@@ -20,6 +20,14 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/conversation/[id]",
+      "regex": "^/conversation/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/conversation/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/service/[serviceid]",
       "regex": "^/service/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -52,6 +60,12 @@
       "regex": "^/choose\\-plan(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/choose\\-plan(?:/)?$"
+    },
+    {
+      "page": "/conversation",
+      "regex": "^/conversation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/conversation(?:/)?$"
     },
     {
       "page": "/dashboard",
