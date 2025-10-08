@@ -21,7 +21,7 @@ export default function WhyChooseStats({
   useEffect(() => setMounted(true), []);
 
   return (
-    <section className="relative py-12 overflow-hidden text-white sm:py-14 md:py-36">
+    <section className="relative py-12 overflow-hidden text-white sm:py-14 md:py-20 lg:py-36">
       {/* background image (same as banner) */}
       <div className="absolute inset-0 -z-10">
         <Image src={backgroundUrl} alt="" fill priority={false} className="object-cover" />
@@ -33,23 +33,23 @@ export default function WhyChooseStats({
 
       <div className="container">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-extrabold md:text-3xl">Why Choose Crown Standard?</h2>
+          <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">Why Choose Crown Standard?</h2>
           <p className="mt-2 mb-5 text-sm md:text-base text-white/85">
             Trusted by thousands, backed by quality, and powered by convenience.
           </p>
         </div>
 
         {/* stats grid */}
-        <div className="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 lg:gap-6 mt-8 sm:grid-cols-2 md:grid-cols-4">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="p-6 text-center border rounded-2xl bg-white/10 backdrop-blur-sm border-white/10 md:p-8"
+              className="p-6 text-center border rounded-2xl bg-white/10 backdrop-blur-sm border-white/10 md:p-6 lg:p-10"
             >
               <div
                 className={`
-                  font-extrabold tracking-tight
-                  text-3xl sm:text-4xl md:text-5xl
+                  font-bold tracking-tight
+                  text-2xl md:text-3xl lg:text-5xl text-[#b9903c]
                   transition-transform duration-500
                   ${mounted ? "scale-100 opacity-100" : "scale-95 opacity-0"}
                 `}
@@ -57,7 +57,7 @@ export default function WhyChooseStats({
                 {s.value.toLocaleString()}
                 {s.suffix ? <span className="ml-1">{s.suffix}</span> : null}
               </div>
-              <div className="mt-2 text-sm md:text-base text-white/85">{s.label}</div>
+              <div className="mt-2 md:mt-4 text-sm md:text-lg text-white/85">{s.label}</div>
             </div>
           ))}
         </div>

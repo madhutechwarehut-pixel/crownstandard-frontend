@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BottomCTA() {
     return (
-        <section className="relative py-10 sm:py-12 md:py-16">
+        <section className="relative section">
             <div className="container">
                 {/* Dark rounded panel */}
                 <div className="relative overflow-visible rounded-2xl bg-[#1F2937] text-white">
@@ -12,7 +12,7 @@ export default function BottomCTA() {
                         alt=""
                         width={500}
                         height={500}
-                        className="absolute top-0 left-0 pointer-events-none select-none"
+                        className="absolute top-0 left-0 pointer-events-none select-none mix-blend-luminosity"
                     />
                     {/* pattern bottom-right */}
                     <Image
@@ -20,7 +20,7 @@ export default function BottomCTA() {
                         alt=""
                         width={500}
                         height={500}
-                        className="absolute bottom-0 right-0 rotate-180 pointer-events-none select-none"
+                        className="absolute bottom-0 right-0 rotate-180 pointer-events-none select-none mix-blend-luminosity"
                     />
 
                     {/* Content row */}
@@ -44,7 +44,7 @@ export default function BottomCTA() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
+                            <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
                                 Still have questions?
                             </h2>
                             <p className="max-w-xl mt-2 text-sm text-white/80 sm:text-base">

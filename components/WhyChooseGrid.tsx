@@ -35,7 +35,7 @@ function FeatureTile({ item, patternUrl }: { item: Feature; patternUrl: string }
                 width={300}
                 height={300}
                 priority={false}
-                className="absolute top-0 left-0 pointer-events-none select-none"
+                className="absolute top-0 left-0 pointer-events-none select-none mix-blend-luminosity"
                 aria-hidden
             />
 
@@ -93,9 +93,9 @@ export default function WhyChooseGrid({ patternUrl }: Props) {
 
     return (
         <section className="section bg-[#F6F1E5]">
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="container">
                 <div className="text-center">
-                    <h2 className="text-2xl font-extrabold md:text-4xl text-slate-900">
+                    <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl text-slate-900">
                         Why Choose Crown Standard?
                     </h2>
                     <p className="max-w-2xl mx-auto mt-2 text-sm md:text-base text-slate-600">

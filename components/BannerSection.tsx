@@ -16,7 +16,7 @@ export default function BannerSection({ title, subtitle, imageUrl, page }: Banne
         <nav className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white/80">
           <Link href="/" className="hover:underline">Home</Link>
           <span className="opacity-60">/</span>
-          <span className="font-medium text-yellow-500">{page}</span>
+          <span className="font-medium text-[#d5a136]">{page}</span>
         </nav>
 
         {/* title */}
@@ -44,7 +44,7 @@ export default function BannerSection({ title, subtitle, imageUrl, page }: Banne
   return (
     <section className="relative w-full">
       {/* Mobile: height-centric */}
-      <div className="relative block md:hidden w-full h-[360px] sm:h-[420px]">
+      <div className="relative block md:hidden w-full h-[360px] md:h-[420px]">
         <Image src={imageUrl} alt={title} fill priority className="object-cover" />
         {Overlays}
         {Content}

@@ -27,7 +27,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
 
             {/* main content grid */}
             <main className="relative z-10 w-full max-w-6xl px-4 mx-auto md:px-6 lg:px-8">
-                <div className="grid items-stretch grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
+                <div className="grid items-stretch grid-cols-1 gap-6 md:gap-4 lg:gap-10 md:grid-cols-2 ">
                     {children}
                 </div>
             </main>

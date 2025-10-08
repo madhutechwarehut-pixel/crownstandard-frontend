@@ -7,7 +7,7 @@ type Props = {
 
 export default function CTASection({ patternUrl }: Props) {
   return (
-    <section className="relative py-16 md:py-20">
+    <section className="relative py-12 md:py-20">
       <div className="container">
         <div className="relative py-16 overflow-hidden text-center text-white rounded-2xl bg-brand-dark md:py-20">
           {/* pattern top-left */}
@@ -16,7 +16,7 @@ export default function CTASection({ patternUrl }: Props) {
             alt=""
             width={500}
             height={500}
-            className="absolute top-0 left-0 pointer-events-none select-none"
+            className="absolute top-0 left-0 pointer-events-none select-none mix-blend-luminosity"
           />
           {/* pattern bottom-right */}
           <Image
@@ -24,12 +24,12 @@ export default function CTASection({ patternUrl }: Props) {
             alt=""
             width={500}
             height={500}
-            className="absolute bottom-0 right-0 rotate-180 pointer-events-none select-none"
+            className="absolute bottom-0 right-0 rotate-180 pointer-events-none select-none mix-blend-luminosity"
           />
 
           {/* content */}
           <div className="relative z-10 max-w-3xl px-4 mx-auto">
-            <h2 className="text-2xl font-extrabold md:text-3xl">
+            <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
               Ready to Experience Crown Standard?
             </h2>
             <p className="mt-3 text-sm md:text-base text-white/80">
