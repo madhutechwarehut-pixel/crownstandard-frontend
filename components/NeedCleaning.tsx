@@ -3,22 +3,22 @@ import Link from "next/link";
 
 export default function NeedCleaning() {
   return (
-    <section id="about" className="section">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+    <section id="about" className="px-5">
+      <div className="grid items-center gap-4 md:gap-6 lg:gap-10 md:grid-cols-2">
         {/* left: image */}
-        <div className="relative w-full overflow-hidden rounded-2xl shadow-soft aspect-[16/12] lg:aspect-[5/4]">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-soft aspect-[16/12] lg:aspect-[5/4] h-full">
           <Image
             src="/index-image1.png"
             alt="Cleaner with supplies"
             fill
             priority={false}
             sizes="(min-width: 1024px) 550px, 100vw"
-            className="object-contain"
+            className="object-cover"
           />
         </div>
 
         {/* right: content */}
-        <div className="px-5">
+        <div className="lg:px-5">
           {/* icon tile */}
           <div className="inline-flex items-center justify-center w-16 h-16 text-white rounded-lg bg-brand-gold">
             {/* shield/stack icon to match the mock */}
@@ -28,7 +28,7 @@ export default function NeedCleaning() {
             </svg>
           </div>
 
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="mt-5 font-bold tracking-tight text-slate-900 text-2xl md:text-3xl mdlg:text-4xl">
             Need Cleaning?
           </h2>
           <p className="mt-2 text-slate-500">
