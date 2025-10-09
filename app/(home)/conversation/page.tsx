@@ -11,7 +11,7 @@ export default function ConversationIndexPage() {
         <div className="p-10">
           {/* Empty state graphic / icon */}
           <div className="flex flex-col items-center justify-center">
-            <div className="flex items-center justify-center w-32 h-32 mb-4 bg-gray-100 rounded-full">
+            <div className="flex items-center justify-center w-32 h-32 mb-4 bg-white rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-12 h-12 text-gray-400"
@@ -50,13 +50,14 @@ export default function ConversationIndexPage() {
         </p>
       </div>
 
-      <div className="flex gap-8 px-16 pb-10 mt-6 md:flex-1">
+      <div className="flex md:gap-8 px-16 pb-10 mt-6 md:flex-1">
         {/* List */}
         <div className="md:w-1/3 w-full flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh]">
           <ChatList chats={chats} />
         </div>
 
         {/* Empty state (no chat open) */}
+
         <div className="flex-1 border border-gray-100 rounded-xl">
           <div className="grid h-full p-10 text-center place-items-center md:display-block">
             <div className="hidden md:block">

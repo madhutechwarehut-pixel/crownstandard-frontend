@@ -57,7 +57,7 @@ function FeatureCard({
       </div>
 
       <h3
-        className={`mt-8 font-semibold leading-tight ${
+        className={`mt-8 font-bold leading-tight ${
           dark ? "text-white" : "text-slate-900"
         } text-xl  md:text-2xl lg:text-3xl`}
       >

@@ -44,36 +44,36 @@ export default function ChoosePlanPage() {
 
     return (
         <div
-            className="flex flex-col items-center justify-center min-h-screen px-6 py-20"
+            className="flex flex-col items-center justify-center min-h-screen lg:px-6 py-20"
         >
             {/* Header */}
             <div className="mb-12 text-center">
-                <h1 className="mb-2 text-4xl font-extrabold text-gray-800">Choose Your Plan</h1>
-                <p className="mb-12 text-sm font-semibold text-gray-500 md:text-base">
+                <h1 className="mb-2 text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Choose Your Plan</h1>
+                <p className="text-sm font-semibold text-gray-500 md:text-base">
                     Unlock premium features and get the most out of our service
                 </p>
             </div>
 
             {/* Plans */}
-            <div className="grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="grid max-w-6xl grid-cols-1 gap-4 lg:gap-8 md:grid-cols-3">
                 {plans.map((plan, idx) => (
                     <div
                         key={idx}
-                        className={`relative flex flex-col justify-between p-10 rounded-xl border shadow-xl transition-all duration-300 ${plan.highlight
-                                ? "bg-gradient-to-b from-gray-900 via-[#524A39] to-gray-900 text-white scale-110 border-transparent"
+                        className={`relative flex flex-col justify-between p-4 lg:p-10 rounded-xl border shadow-xl transition-all duration-300 ${plan.highlight
+                                ? "bg-gradient-to-b from-gray-900 via-[#524A39] to-gray-900 text-white scale-100 md:scale-110 border-transparent"
                                 : "bg-gradient-to-b from-[#FDF8F2] to-[#F5E8CE] border-amber-200 text-gray-900"
                             }`}
                     >
                         <div>
                             <h3
-                                className={`text-xl font-semibold mb-6 ${plan.highlight ? "text-white" : "text-gray-900"
+                                className={`text-xl font-semibold mb-4 lg:mb-6 ${plan.highlight ? "text-white" : "text-gray-900"
                                     }`}
                             >
                                 {plan.name}
                             </h3>
 
-                            <div className="flex items-baseline mb-8">
-                                <span className="text-4xl font-extrabold tracking-tight">
+                            <div className="flex items-baseline mb-4 lg:mb-8">
+                                <span className="text-3xl lg:text-4xl font-bold tracking-tight">
                                     ${plan.price}
                                 </span>
                                 <span
@@ -115,11 +115,11 @@ export default function ChoosePlanPage() {
             </div>
 
             {/* Footer */}
-            <div className="mt-24 text-sm font-semibold text-center text-gray-500">
+            <div className="mt-10 lg:mt-24 text-sm font-semibold text-center text-gray-500">
                 <p>Sign in to subscribe to a plan and unlock premium features</p>
                 <Link
                     href="/login?type=customer"
-                    className="inline-block px-6 py-2 mt-4 font-medium text-white rounded-full bg-amber-600 hover:bg-amber-700"
+                    className="inline-block px-8 py-3 mt-4 font-medium text-white rounded-full bg-[#BB9239] hover:bg-[#1F2937] transition-all duration-300 ease-in-out"
                 >
                     Sign In
                 </Link>

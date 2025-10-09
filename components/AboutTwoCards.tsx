@@ -8,7 +8,7 @@ type Props = {
 
 export default function AboutTwoCards({ backgroundUrl }: Props) {
   return (
-    <section className="relative py-12 sm:py-14 md:py-16">
+    <section className="relative py-12 sm:py-14 md:py-16 lg:py-24">
       {/* background image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -22,7 +22,7 @@ export default function AboutTwoCards({ backgroundUrl }: Props) {
         <div className="absolute inset-0 bg-[#c69e4b] mix-blend-multiply" />
       </div>
 
-      <div className="container grid gap-6 pt-20 md:grid-cols-2">
+      <div className="container grid gap-6 md:grid-cols-2">
         <Card
           title="For Customers"
           items={[
@@ -46,13 +46,13 @@ export default function AboutTwoCards({ backgroundUrl }: Props) {
 
 function Card({ title, items }: { title: string; items: string[] }) {
   return (
-    <article className="p-6 rounded-2xl bg-white/95 shadow-soft md:p-8">
-      <h3 className="text-lg font-semibold md:text-xl text-slate-900">{title}</h3>
+    <article className="p-6 rounded-2xl bg-white/95 shadow-soft md:p-8 md:py-10">
+      <h3 className="text-xl font-semibold md:text-2xl text-slate-900">{title}</h3>
 
       {/* thin divider under title */}
       <div className="mt-3 h-[2px] w-24 bg-slate-200" />
 
-      <ul className="mt-5 space-y-3 text-sm md:text-base text-slate-700">
+      <ul className="mt-5 space-y-2 md:space-y-4 text-sm md:text-base text-slate-700">
         {items.map((t) => (
           <li key={t} className="flex items-start gap-3">
             <span className="inline-flex items-center justify-center w-5 h-5 mt-1 rounded-full ring-1 ring-brand-gold/50">

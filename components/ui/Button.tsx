@@ -8,7 +8,7 @@ type Props = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButt
 
 export default function Button({ className = "", variant = "gold", full, ...props }: Props) {
   const base =
-    "h-11 px-4 inline-flex items-center justify-center rounded-xl text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
+    "h-11 px-4 inline-flex items-center justify-center rounded-full text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
   const styles: Record<string, string> = {
     gold:
       "bg-[#B8892D] text-white hover:brightness-110 active:brightness-95 focus-visible:ring-[#B8892D] ring-offset-transparent",

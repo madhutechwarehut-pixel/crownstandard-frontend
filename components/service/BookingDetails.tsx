@@ -66,7 +66,7 @@ export default function ServiceBookingForm({ service }: { service: NormalizedSer
         <>
 
             {/* ===== Property Information + Photo Uploads on split background ===== */}
-            <section className="relative mt-10 max-w-7xl">
+            <section className="relative max-w-7xl">
                 <div className="mx-auto max-w-7xl">
                     <div className="grid gap-6 md:grid-cols-2">
                         {/* Property Information card */}

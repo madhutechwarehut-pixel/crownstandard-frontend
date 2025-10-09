@@ -44,15 +44,15 @@ export default async function ServiceDetailPage({
             />
 
             {/* Light beige content section */}
-            <section className="bg-white">
-                <div className="px-4 py-12 mx-auto max-w-7xl md:py-16">
+            <section className="section bg-white">
+                <div className="container">
                     <ServiceOverviewCard service={service} />
                 </div>
             </section>
             <section className="relative">
                 {/* Beige top section */}
-                <div className="bg-[#F4F1EC]">
-                    <div className="relative z-20 px-4 py-12 mx-auto max-w-7xl md:py-16">
+                <div className="section bg-[#F4F1EC]">
+                    <div className="relative z-20 container">
                         <BookingDetails service={service} />
                     </div>
                 </div>

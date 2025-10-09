@@ -71,17 +71,17 @@ export default function HowToGetStartedPage() {
                 imageUrl="/GetStarted-banner.png"
                 page="Getting Started Guide"
             />
-            <div className="px-6 py-10 pb-0 mx-auto max-w-7xl">
+            <div className="section mx-auto max-w-7xl">
                 <div className="container">
                     {/* Two main cards */}
-                    <div className="grid grid-cols-1 gap-6 mt-10 mb-20 md:grid-cols-2 lg:gap-8">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
                         {/* Customers */}
                         <section className="overflow-hidden border-l-[1px] border-l-[#BB9239] bg-card text-card-foreground relative">
                             {/* Gold label bar */}
-                            <div className="px-2 lg:px-5 py-3 text-white md:px-4 md:py-5 bg-[#BB9239]">
+                            <div className="p-4 lg:px-5 text-white md:px-4 md:py-5 bg-[#BB9239]">
                                 <div className="flex items-center gap-2">
                                     <Users className="w-5 h-5 shrink-0" />
-                                    <span className="uppercase tracking-wide font-semibold text-[12px] md:text-xl lg:text-2xl mb-1">
+                                    <span className="uppercase tracking-wide font-semibold text-xl lg:text-2xl mb-1">
                                         For Customers
                                     </span>
                                 </div>
@@ -90,7 +90,7 @@ export default function HowToGetStartedPage() {
                                 </p>
                             </div>
 
-                            <div className="p-6 mb-20 md:p-8 md:pr-0">
+                            <div className="p-6 mb-8 md:mb-20 md:p-8 pr-0">
 
                                 <ol className="space-y-4 md:space-y-5">
                                     {/* 1 */}
@@ -98,7 +98,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <UserPlus className="w-5 h-5 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <UserPlus className="w-4 h-4 text-muted-foreground" /> */}
                                                 Create Your Account
@@ -132,7 +132,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <MapPin className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 Set Your Location
                                             </h3>
@@ -153,7 +153,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <CalendarDays className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <CalendarDays className="w-4 h-4 text-muted-foreground" /> */}
                                                 Browse &amp; Book Services
@@ -176,7 +176,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <CreditCard className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <CreditCard className="w-4 h-4 text-muted-foreground" /> */}
                                                 Secure Payment
@@ -196,7 +196,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <Star className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <Star className="w-4 h-4 text-muted-foreground" /> */}
                                                 Enjoy & Review
@@ -225,10 +225,10 @@ export default function HowToGetStartedPage() {
                         {/* Providers */}
                         <section className="overflow-hidden border-l-[1px] border-l-[#BB9239] bg-card text-card-foreground relative">
                             {/* Gold label bar */}
-                            <div className="px-2 lg:px-5 py-3 text-white md:px-4 md:py-5 bg-[#BB9239]">
+                            <div className="p-4 lg:px-5 text-white md:px-4 md:py-5 bg-[#BB9239]">
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 shrink-0" />
-                                    <span className="uppercase tracking-wide font-semibold text-[12px] md:text-xl lg:text-2xl mb-1">
+                                    <span className="uppercase tracking-wide font-semibold text-xl lg:text-2xl mb-1">
                                         For Service Providers
                                     </span>
                                 </div>
@@ -237,7 +237,7 @@ export default function HowToGetStartedPage() {
                                 </p>
                             </div>
 
-                            <div className="p-6 mb-20 md:p-8 md:pr-0">
+                            <div className="p-6 mb-8 md:mb-20 md:p-8 pr-0">
 
                                 <ol className="space-y-4 md:space-y-5">
                                     {/* 1 */}
@@ -245,7 +245,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <UserPlus className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <UserPlus className="w-4 h-4 text-muted-foreground" /> */}
                                                 Create Provider Account
@@ -267,7 +267,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <FileCheck className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <FileCheck className="w-4 h-4 text-muted-foreground" /> */}
                                                 Complete Verification
@@ -290,7 +290,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <Settings className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <Settings className="w-4 h-4 text-muted-foreground" /> */}
                                                 Set Up Your Profile
@@ -313,7 +313,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <Clock className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <Clock className="w-4 h-4 text-muted-foreground" /> */}
                                                 Configure Availability
@@ -336,7 +336,7 @@ export default function HowToGetStartedPage() {
                                         <span className="shrink-0 h-10 w-10 rounded-xl grid place-items-center text-[13px] font-semibold bg-[#BB9239] text-white translate-x-[-20px]">
                                             <CalendarDays className="w-4 h-4 text-muted-foreground" />
                                         </span>
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-5">
                                             <h3 className="flex items-center gap-2 font-semibold text-primary">
                                                 {/* <CalendarDays className="w-4 h-4 text-muted-foreground" /> */}
                                                 Start Accepting Bookings
@@ -382,7 +382,7 @@ export default function HowToGetStartedPage() {
 
                     <div className="container">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-2xl font-bold md:text-3xl">
+                            <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
                                 Important Information
                             </h2>
                             <p className="mt-2 text-sm md:text-base text-white/85">

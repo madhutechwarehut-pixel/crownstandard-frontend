@@ -36,7 +36,7 @@ export default async function LoginPage({
                         </div>
                     </div>
 
-                    <h1 className="text-3xl font-semibold leading-snug text-[#1F2937]">
+                    <h1 className="text-3xl xl:text-4xl font-bold leading-snug text-[#1F2937]">
                         Professional Cleaning <br className="hidden lg:block" /> Made Simple
                     </h1>
                     <p className="mt-3 text-sm text-[#6B7280]">
@@ -46,7 +46,7 @@ export default async function LoginPage({
 
                     <ul className="mt-8 space-y-5">
                         <li className="flex items-start gap-3">
-                            <span className="grid h-9 w-9 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
+                            <span className="grid h-10 w-10 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
                                 <ShieldCheck className="w-5 h-5" />
                             </span>
                             <div>
@@ -58,7 +58,7 @@ export default async function LoginPage({
                         </li>
 
                         <li className="flex items-start gap-3">
-                            <span className="grid h-9 w-9 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
+                            <span className="grid h-10 w-10 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
                                 <Star className="w-5 h-5" />
                             </span>
                             <div>
@@ -70,7 +70,7 @@ export default async function LoginPage({
                         </li>
 
                         <li className="flex items-start gap-3">
-                            <span className="grid h-9 w-9 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
+                            <span className="grid h-10 w-10 place-items-center rounded-md bg-[#F0E2C9] text-[#B8892D]">
                                 <Users className="w-5 h-5" />
                             </span>
                             <div>
@@ -88,7 +88,7 @@ export default async function LoginPage({
             <section className="relative">
                 <div className="relative rounded-2xl bg-white shadow-[0_12px_32px_rgba(0,0,0,0.08)] border border-[#F3F4F6] p-5 sm:p-6 lg:p-7">
                     <header className="mb-4 text-center">
-                        <h2 className="text-2xl font-bold text-[#1F2937]">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937]">
                             Welcome Back
                         </h2>
                         <p className="mt-1 text-sm text-[#6B7280]">

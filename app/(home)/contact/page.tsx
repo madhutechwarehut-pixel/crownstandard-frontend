@@ -21,21 +21,21 @@ export default function SupportPage() {
     ];
 
     return (
-        <div className="max-w-7xl mx-auto bg-white min-h-[95vh] flex flex-col">
+        <div className="container bg-white flex flex-col">
             {/* ===== Header Section ===== */}
-            <div className="px-16 pt-12">
-                <h1 className="text-3xl font-semibold text-gray-900">Support Center</h1>
+            <div className="pt-12">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">Support Center</h1>
                 <p className="max-w-2xl mt-2 text-gray-500">
                     Get help from our admin team for feedback, disputes, or other issues.
                 </p>
             </div>
 
             {/* ===== Feature Cards ===== */}
-            <div className="grid grid-cols-1 gap-6 px-16 mt-10 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 md:gap-4 lg:gap-6 mt-10 sm:grid-cols-3">
                 {featureCards.map((card, idx) => (
                     <div
                         key={idx}
-                        className="relative overflow-hidden border border-amber-100 rounded-lg p-6 bg-gradient-to-br from-[#FFFFFF] to-[#FFF6E2] hover:shadow-sm transition-all"
+                        className="relative overflow-hidden border border-amber-100 rounded-lg p-4 md:p-6 bg-gradient-to-br from-[#FFFFFF] to-[#FFF6E2] hover:shadow-sm transition-all"
                     >
                         {/* decorative pattern (top-right) */}
                         <Image
@@ -51,7 +51,7 @@ export default function SupportPage() {
                                 {card.icon}
                             </div>
                             <div>
-                                <p className="font-bold text-gray-900">{card.title}</p>
+                                <p className="font-bold text-gray-900 text-lg md:text-xl">{card.title}</p>
                                 <p className="mt-1 text-sm leading-relaxed text-gray-600">{card.desc}</p>
                             </div>
                         </div>
@@ -60,15 +60,15 @@ export default function SupportPage() {
             </div>
 
             {/* ===== Booking Form & Contact Info ===== */}
-            <div className="flex flex-wrap gap-8 px-16 py-12">
+            <div className="flex flex-wrap gap-4 lg:gap-8 py-12">
                 {/* Left – Booking Details */}
-                <div className="flex-1 bg-[#F3F1ED] p-8 rounded-xl border border-gray-100">
-                    <h2 className="text-lg font-semibold text-gray-900">Booking Details</h2>
+                <div className="flex-1 bg-[#F3F1ED] p-4 lg:p-8 rounded-xl border border-gray-100">
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900">Booking Details</h2>
                     <p className="mb-6 text-sm text-gray-500">
                         Fill in your preferred date, time, and location
                     </p>
 
-                    <form className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <form className="grid grid-cols-1 gap-2 lg:gap-5 md:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium text-gray-700">Full Name</label>
                             <input
@@ -124,7 +124,7 @@ export default function SupportPage() {
                             />
                         </div>
 
-                        <div className="col-span-2">
+                        <div className="md:col-span-2">
                             <label className="text-sm font-medium text-gray-700">Message</label>
                             <textarea
                                 placeholder="Any specific requirements or notes..."
@@ -133,10 +133,10 @@ export default function SupportPage() {
                             ></textarea>
                         </div>
 
-                        <div className="col-span-2">
+                        <div className="md:col-span-2">
                             <button
                                 type="submit"
-                                className="w-full py-3 text-sm font-medium text-white rounded-md bg-amber-600 hover:bg-amber-700"
+                                className="w-full py-3 text-sm font-medium text-white rounded-md bg-[#b9903c] hover:bg-[#1d2432] transition-all duration-300 ease-in-out"
                             >
                                 Submit Support Request
                             </button>
@@ -145,27 +145,27 @@ export default function SupportPage() {
                 </div>
 
                 {/* Right – Contact Info */}
-                <div className="w-[40%] bg-[#1D2432] text-white p-8 rounded-xl flex flex-col justify-between">
+                <div className="w-full lg:w-[40%] bg-[#1D2432] text-white p-4 lg:p-8 rounded-xl flex flex-col justify-between">
                     <div>
-                        <h3 className="mb-4 text-lg font-semibold">Other Ways To Reach Us</h3>
+                        <h3 className="md:mb-4 text-xl md:text-2xl font-bold text-[#C49A3F]">Other Ways To Reach Us</h3>
                         <p className="mb-6 text-sm text-gray-300">
                             Need immediate assistance? Try these alternatives.
                         </p>
 
                         <div className="space-y-5">
                             <div>
-                                <p className="text-sm font-medium">Direct Email</p>
-                                <p className="mt-1 text-sm text-gray-300">
+                                <p className="text-lg font-medium">Direct Email</p>
+                                <p className="mt-1 text-base font-medium text-gray-500">
                                     For urgent matters email us directly at{" "}
-                                    <span className="font-medium text-amber-400">
+                                    <span className="font-medium text-[#b9903c]">
                                         support@crownstandard.ca
                                     </span>
                                 </p>
                             </div>
 
                             <div>
-                                <p className="text-sm font-medium">Business Hours</p>
-                                <p className="mt-1 text-sm text-gray-300">
+                                <p className="text-lg font-medium">Business Hours</p>
+                                <p className="mt-1 text-base font-medium text-gray-500">
                                     Monday–Friday: 8:00 A.M – 6:00 P.M <br />
                                     Saturday: 9:00 A.M – 4:00 P.M <br />
                                     Sunday: Closed
@@ -178,7 +178,7 @@ export default function SupportPage() {
                         <p className="text-sm font-medium">Emergency Situation</p>
                         <p className="mt-1 text-sm text-gray-300">
                             For urgent or safety concerns, please mark your request as{" "}
-                            <span className="font-semibold text-amber-400">“High Priority”</span> and
+                            <span className="font-semibold text-[#b9903c]">“High Priority”</span> and
                             contact us directly at the email above. We monitor high priority requests
                             throughout the day.
                         </p>

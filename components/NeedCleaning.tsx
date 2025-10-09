@@ -28,7 +28,7 @@ export default function NeedCleaning() {
             </svg>
           </div>
 
-          <h2 className="mt-5 font-bold tracking-tight text-slate-900 text-2xl md:text-3xl mdlg:text-4xl">
+          <h2 className="mt-5 font-bold tracking-tight text-slate-900 text-2xl md:text-3xl lg:text-4xl">
             Need Cleaning?
           </h2>
           <p className="mt-2 text-slate-500">

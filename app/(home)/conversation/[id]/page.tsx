@@ -13,9 +13,9 @@ export default async function ConversationDetailPage(props: {
     if (!chat) return notFound();
 
     return (
-        <div className="flex flex-col min-h-[95vh] mx-auto bg-white max-w-7xl">
+        <div className="flex flex-col container bg-white">
             {/* ===== Page Heading outside layout ===== */}
-            <div className="px-16 pt-10">
+            <div className="pt-10">
                 <h1 className="text-2xl font-semibold text-gray-900">Your Conversations</h1>
                 <p className="mt-1 text-gray-500">
                     Manage your messages with service providers and customers
@@ -23,9 +23,9 @@ export default async function ConversationDetailPage(props: {
             </div>
 
             {/* ===== Main layout ===== */}
-            <div className="flex flex-1 gap-8 px-16 pb-10 mt-6">
+            <div className="flex flex-1 gap-4 lg:gap-8 pb-10 mt-6">
                 {/* Chat list with highlight */}
-                <div className="w-1/3 flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh]">
+                <div className="w-1/3 flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh] md:display-block hidden">
                     <ChatList chats={chats} />
                 </div>
 
