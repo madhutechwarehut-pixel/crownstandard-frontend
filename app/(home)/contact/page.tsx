@@ -1,5 +1,6 @@
-import { Clock, ShieldCheck, Headphones } from "lucide-react";
+import { Clock, ShieldCheck, Headphones, Mail, Contact } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SupportPage() {
     const featureCards = [
@@ -23,7 +24,7 @@ export default function SupportPage() {
     return (
         <div className="max-w-7xl mx-auto bg-white min-h-[95vh] flex flex-col">
             {/* ===== Header Section ===== */}
-            <div className="px-16 pt-12">
+            <div className="px-5 pt-12">
                 <h1 className="text-3xl font-semibold text-gray-900">Support Center</h1>
                 <p className="max-w-2xl mt-2 text-gray-500">
                     Get help from our admin team for feedback, disputes, or other issues.
@@ -31,7 +32,7 @@ export default function SupportPage() {
             </div>
 
             {/* ===== Feature Cards ===== */}
-            <div className="grid grid-cols-1 gap-6 px-16 mt-10 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 px-5 mt-10 sm:grid-cols-3">
                 {featureCards.map((card, idx) => (
                     <div
                         key={idx}
@@ -60,15 +61,15 @@ export default function SupportPage() {
             </div>
 
             {/* ===== Booking Form & Contact Info ===== */}
-            <div className="flex flex-wrap gap-8 px-16 py-12">
+            <div className="flex flex-wrap gap-8 px-5 py-12">
                 {/* Left – Booking Details */}
                 <div className="flex-1 bg-[#F3F1ED] p-8 rounded-xl border border-gray-100">
-                    <h2 className="text-lg font-semibold text-gray-900">Booking Details</h2>
+                    <h2 className="text-2xl font-bold text-gray-900">Booking Details</h2>
                     <p className="mb-6 text-sm text-gray-500">
                         Fill in your preferred date, time, and location
                     </p>
 
-                    <form className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <form className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium text-gray-700">Full Name</label>
                             <input
@@ -124,16 +125,15 @@ export default function SupportPage() {
                             />
                         </div>
 
-                        <div className="col-span-2">
+                        <div className="col-span-2 mb-2">
                             <label className="text-sm font-medium text-gray-700">Message</label>
-                            <textarea
+                            <input
                                 placeholder="Any specific requirements or notes..."
-                                rows={4}
-                                className="w-full px-3 py-2 mt-2 text-sm border border-gray-300 rounded-md outline-none resize-none focus:ring-1 focus:ring-amber-600"
-                            ></textarea>
+                                className="w-full px-3 py-2 mt-2 text-sm border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-amber-600"
+                            ></input>
                         </div>
 
-                        <div className="col-span-2">
+                        <div className="">
                             <button
                                 type="submit"
                                 className="w-full py-3 text-sm font-medium text-white rounded-md bg-amber-600 hover:bg-amber-700"
@@ -145,43 +145,75 @@ export default function SupportPage() {
                 </div>
 
                 {/* Right – Contact Info */}
-                <div className="w-[40%] bg-[#1D2432] text-white p-8 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <h3 className="mb-4 text-lg font-semibold">Other Ways To Reach Us</h3>
-                        <p className="mb-6 text-sm text-gray-300">
-                            Need immediate assistance? Try these alternatives.
-                        </p>
+                {/* Right – Contact Info */}
+                <div className="relative md:w-[50%] bg-[#1D2432] text-white p-8 rounded-2xl overflow-hidden">
+                    {/* top-right decorative illustration */}
+                    <Image
+                        src="/Vector.png"
+                        alt="Vector illustration"
+                        width={272}
+                        height={179}
+                        className="absolute -right-[100px] -top-10 opacity-[3%] pointer-events-none select-none"
+                    />
 
-                        <div className="space-y-5">
-                            <div>
-                                <p className="text-sm font-medium">Direct Email</p>
-                                <p className="mt-1 text-sm text-gray-300">
-                                    For urgent matters email us directly at{" "}
-                                    <span className="font-medium text-amber-400">
-                                        support@crownstandard.ca
-                                    </span>
-                                </p>
-                            </div>
+                    {/* content */}
+                    <div className="relative flex flex-col justify-start h-full space-y-8">
+                        <div>
+                            <h3 className="flex items-center gap-2 text-lg font-semibold">
+                                <Contact className="inline-block w-6 h-6 text-brand-gold" />{" "}
+                                Other Ways To Reach Us
+                            </h3>
+                            <p className="mb-8 text-sm text-gray-300">
+                                Need immediate assistance? Try these alternatives.
+                            </p>
 
-                            <div>
-                                <p className="text-sm font-medium">Business Hours</p>
-                                <p className="mt-1 text-sm text-gray-300">
-                                    Monday–Friday: 8:00 A.M – 6:00 P.M <br />
-                                    Saturday: 9:00 A.M – 4:00 P.M <br />
-                                    Sunday: Closed
-                                </p>
+                            <div className="space-y-8">
+                                {/* Direct Email */}
+                                <div className="flex items-start gap-5">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#232B3A] ring-1 ring-gray-700">
+                                        <Mail size={18} className="text-white" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium">Direct Email</p>
+                                        <p className="mt-1 text-sm text-gray-300">
+                                            For urgent matters email us directly at
+                                        </p>
+                                        <Link
+                                            href="mailto:support@crownstandard.ca"
+                                            className="text-sm font-medium text-brand-gold hover:underline"
+                                        >
+                                            support@crownstandard.ca
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                {/* Business Hours */}
+                                <div className="flex items-start gap-5">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#232B3A] ring-1 ring-gray-700">
+                                        <Clock size={18} className="text-white" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium">Business Hours</p>
+                                        <p className="mt-1 text-sm leading-relaxed text-gray-300">
+                                            Monday–Friday: 8:00 A.M – 6:00 P.M <br />
+                                            Saturday: 9:00 A.M – 4:00 P.M <br />
+                                            Sunday: Closed
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="pt-4 mt-10 border-t border-gray-600">
-                        <p className="text-sm font-medium">Emergency Situation</p>
-                        <p className="mt-1 text-sm text-gray-300">
-                            For urgent or safety concerns, please mark your request as{" "}
-                            <span className="font-semibold text-amber-400">“High Priority”</span> and
-                            contact us directly at the email above. We monitor high priority requests
-                            throughout the day.
-                        </p>
+                        {/* Divider + Emergency section */}
+                        <div className="pt-5 border-t border-gray-700">
+                            <p className="pt-3 text-sm font-medium">Emergency Situation</p>
+                            <p className="mt-1 text-sm text-gray-300">
+                                For urgent or safety concerns, please mark your request as{" "}
+                                <span className="font-semibold text-brand-gold">“High Priority”</span> and
+                                contact us directly at the email above. We monitor high-priority requests
+                                throughout the day and respond as quickly as possible.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
