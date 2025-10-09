@@ -103,28 +103,28 @@ function ProviderDashboard() {
             <div className="relative z-10 px-6 py-8 mx-auto max-w-7xl lg:px-8">
                 {/* Header */}
                 <header className="mb-6">
-                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
                         Provider Dashboard
                     </h1>
-                    <p className="text-gray-500">Manage your cleaning business</p>
+                    <p className="mt-1 text-gray-500">Manage your cleaning business</p>
                 </header>
 
                 {/* Tabs */}
-                <nav className="flex flex-wrap justify-between gap-3 mb-3">
+                <nav className="flex flex-wrap justify-between gap-2 mb-3">
                     {TABS.map((t) => {
                         const active = tab === t.key;
                         return (
-                            <div key={t.key} className="relative">
+                            <div key={t.key} className="relative flex-1">
                                 <button
                                     onClick={() => {
                                         setTab(t.key);
                                         router.push(`/provider/dashboard?tab=${t.key}`, { scroll: false });
                                     }}
                                     className={[
-                                        "px-5 py-2 md:px-10 rounded-md text-sm font-medium border transition relative",
+                                        "px-5 py-2 rounded-md text-md font-medium border transition relative w-full",
                                         active
                                             ? "bg-gray-900 text-white border-gray-900 shadow-sm"
-                                            : "bg-amber-600/80 text-white hover:bg-amber-700",
+                                            : "bg-[#b9903c] text-white hover:bg-[#111827]",
                                     ].join(" ")}
                                 >
                                     {t.label}
@@ -175,30 +175,30 @@ function OverviewTab() {
     return (
         <>
             {/* KPI Stat Cards */}
-            <section className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2 xl:grid-cols-4">
+            <section className="grid grid-cols-1 gap-3 sm:gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
                 <StatCard
                     title="Active Services"
                     value="0"
                     subtitle="Service listings"
-                    icon={<Calendar className="w-10 h-10 text-amber-700" />}
+                    icon={<Calendar className="w-10 h-10 text-[#b9903c]" />}
                 />
                 <StatCard
                     title="Active Bookings"
                     value="0"
                     subtitle="Confirmed & in progress"
-                    icon={<Star className="w-10 h-10 text-amber-700" />}
+                    icon={<Star className="w-10 h-10 text-[#b9903c]" />}
                 />
                 <StatCard
                     title="Monthly Earnings"
                     value="$0.00"
                     subtitle="75% after platform fee + 100% of tips (paid daily)"
-                    icon={<DollarSign className="w-10 h-10 text-amber-700" />}
+                    icon={<DollarSign className="w-10 h-10 text-[#b9903c]" />}
                 />
                 <StatCard
                     title="Average Rate"
                     value="0"
                     subtitle="Your hourly rate"
-                    icon={<Heart className="w-10 h-10 text-amber-700" />}
+                    icon={<Heart className="w-10 h-10 text-[#b9903c]" />}
                 />
             </section>
 

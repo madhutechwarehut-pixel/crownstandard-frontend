@@ -41,16 +41,16 @@ export default function ConversationIndexPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-[95vh] mx-auto bg-white max-w-7xl">
+    <div className="flex flex-col container bg-white">
       {/* Heading outside */}
-      <div className="px-16 pt-10">
+      <div className="pt-10">
         <h1 className="text-2xl font-semibold text-gray-900">Your Conversations</h1>
         <p className="mt-1 text-gray-500">
           Manage your messages with service providers and customers
         </p>
       </div>
 
-      <div className="flex md:gap-8 px-16 pb-10 mt-6 md:flex-1">
+      <div className="flex gap-4 lg:gap-8 pb-10 mt-6 md:flex-1">
         {/* List */}
         <div className="md:w-1/3 w-full flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh]">
           <ChatList chats={chats} />
@@ -58,14 +58,14 @@ export default function ConversationIndexPage() {
 
         {/* Empty state (no chat open) */}
 
-        <div className="flex-1 border border-gray-100 rounded-xl">
-          <div className="grid h-full p-10 text-center place-items-center md:display-block">
-            <div className="hidden md:block">
+        <div className="flex-1 border border-gray-100 rounded-xl hidden md:block">
+          <div className="grid h-full p-10 text-center place-items-center">
+            {/* <div className="hidden md:block"> */}
               <p className="text-lg font-medium text-gray-700">No conversation selected</p>
               <p className="mt-1 text-sm text-gray-500">
                 Choose a chat from the left to start messaging.
               </p>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
