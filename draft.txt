@@ -98,6 +98,9 @@ Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like foo
     12. Made discount code input + button responsive for mobile and desktop.
     13. Fixed Next.js build error by switching params to an async object and awaiting it.
 
+
+    ----------------------------------------(not listed)
+
     1. Created the dashboard page skeleton (`app/dashboard/page.tsx`) with container `max-w-7xl`.
     2. Implemented stat cards with Lucide icons (`Calendar`, `Star`, `DollarSign`, `Heart`) and fixed background gradient / circular overlay effect in the top-right corner.
     3. Implemented quick action cards (“Book Service”, “My Bookings”, “Favourites”, “My Reviews”) with hover states and right-arrow button.
