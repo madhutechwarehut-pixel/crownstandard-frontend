@@ -53,7 +53,7 @@ function WorkCard({
   steps: Step[];
 }) {
   const base =
-    "rounded-[18px] p-7 md:p-10 shadow-soft overflow-hidden";
+    "rounded-[18px] p-7 lg:p-10 shadow-soft overflow-hidden";
   const wrap =
     variant === "dark"
       ? "bg-brand-dark"
@@ -84,11 +84,11 @@ function WorkCard({
 
 export default function HowCrownWorks() {
   return (
-    <section className="py-14 md:py-20">
+    <section className="pt-14 md:pt-20">
       <div className="container">
         {/* section header */}
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-extrabold md:text-4xl text-slate-900">
+          <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl text-slate-900">
             How Crown Standard Works
           </h2>
           <p className="mt-2 text-sm md:text-base text-slate-600">

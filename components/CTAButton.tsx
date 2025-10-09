@@ -15,7 +15,7 @@ export default function CTAButton({
   className = "",
   ...props
 }: Props) {
-  const base = "rounded-md font-medium transition shadow-sm";
+  const base = "rounded-full font-medium transition shadow-sm";
   const styles =
     variant === "primaryGradient"
       ? "text-white bg-gradient-to-r from-[#1E2430] to-[#12161D] hover:opacity-95"

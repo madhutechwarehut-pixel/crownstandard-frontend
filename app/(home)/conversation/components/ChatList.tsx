@@ -7,7 +7,7 @@ export default function ChatList({
 }: { chats: Chat[]; selectedId?: string }) {
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 px-4 py-4 space-y-2 overflow-y-auto scrollbar-hide">
+      <div className="flex-1 px-2 lg:px-4 py-4 space-y-2 overflow-y-auto scrollbar-hide">
         {chats.map((chat) => {
           const initials = chat.name.split(" ").map((n) => n[0]).join("");
           const selected = selectedId === chat.id;
@@ -16,10 +16,10 @@ export default function ChatList({
               key={chat.id}
               href={`/conversation/${chat.id}`}
               className={[
-                "flex gap-2 justify-between items-center px-4 py-3 transition-all",
+                "flex gap-2 justify-between items-center px-2 lg:px-4 py-3 transition-all",
                 selected
-                  ? "bg-white shadow-sm border border-gray-100"
-                  : "bg-gray-100 hover:bg-gray-200",
+                  ? "bg-[#1D2432] shadow-sm border border-gray-500"
+                  : "bg-white hover:bg-dark",
               ].join(" ")}
             >
               <div className="relative flex items-center justify-center p-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">

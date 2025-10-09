@@ -11,7 +11,7 @@ export default function MissionSection() {
             <Target className="h-7 w-7" strokeWidth={2} />
           </div>
 
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="mt-5 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
             Our Mission
           </h2>
           <p className="mt-4 leading-relaxed text-slate-600">
@@ -24,7 +24,7 @@ export default function MissionSection() {
         </div>
 
         {/* right: image */}
-        <div className="relative w-full overflow-hidden rounded-2xl shadow-soft aspect-[4/3]">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-soft aspect-[4/3] h-full">
           <Image
             src="/ourMission.png" // replace with your mission image
             alt="Our Mission"

@@ -137,11 +137,11 @@ export default function ServicesPage() {
                 page="Services"
             />
 
-            <div className="h-[200px] w-full bg-[#BB9239]" />
+            <div className="h-32 sm:h-40 lg:h-[200px] w-full bg-[#BB9239]" />
 
             {/* search & filters card */}
-            <section className="relative z-10 px-8 mx-auto -mt-20 max-w-7xl">
-                <div className="px-8 py-10 bg-white shadow-sm rounded-2xl ring-1 ring-gray-200">
+            <section className="relative z-10 container -mt-20">
+                <div className="px-4 lg:px-8 py-4 lg:py-10 bg-white shadow-sm rounded-2xl ring-1 ring-gray-200">
                     {/* top row: search + hide/show filter */}
                     <div className="flex items-start justify-between">
                         <h2 className="mb-6 text-2xl font-semibold text-gray-900">
@@ -189,7 +189,7 @@ export default function ServicesPage() {
                     {showFilters && (
                         <>
                             {/* tabs */}
-                            <div className="flex flex-wrap gap-3 mb-4">
+                            <div className="flex flex-wrap lg:gap-3 gap-2 mb-4">
                                 {FILTER_TABS.map((label) => {
                                     const active = activeTab === label;
                                     return (
@@ -279,13 +279,14 @@ export default function ServicesPage() {
             </section>
 
             {/* results */}
-            <section className="max-w-6xl px-6 py-12 mx-auto mb-10">
+            <section className="section">
+                <div className="container">
                 {loading ? (
                     <>
                         <p className="mb-6 text-gray-600" role="status" aria-live="polite">
                             Loading services…
                         </p>
-                        <div className="grid gap-6 md:grid-cols-3">
+                        <div className="grid gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             {Array.from({ length: 3 }).map((_, i) => (
                                 <ServiceCardSkeleton key={i} />
                             ))}
@@ -300,13 +301,14 @@ export default function ServicesPage() {
                         <p className="mb-6 text-gray-600">
                             Showing {filtered.length} of {SERVICES.length} services
                         </p>
-                        <div className="grid gap-6 md:grid-cols-3">
+                        <div className="grid gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             {filtered.map((s) => (
                                 <ServiceCard key={s.id} service={s} />
                             ))}
                         </div>
                     </>
                 )}
+                </div>
             </section>
         </>
     );
