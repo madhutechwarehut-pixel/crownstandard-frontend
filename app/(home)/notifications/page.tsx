@@ -55,7 +55,7 @@ export default function NotificationsPage() {
                 <h1 className="text-2xl font-semibold text-gray-900">
                     All Notifications
                 </h1>
-                {
+                {/* {
                     notifications.length !== 0 && (
                         <button
                             onClick={handleMarkAllRead}
@@ -64,7 +64,7 @@ export default function NotificationsPage() {
                             <CheckCheck size={16} /> Mark All As Read
                         </button>
                     )
-                }
+                } */}
             </div>
 
             <hr className="mb-8" />
