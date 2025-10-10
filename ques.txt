@@ -1,0 +1,73 @@
+🧑‍💼 1. User Types & Roles
+
+Are there three roles: Admin, Service Provider, and Customer?   - Yes
+If yes, should they all be stored in a single User modelwith a role field, or do you prefer separate collections/tablesfor each? - tell me what is better 
+
+
+
+🧹 2. Service Listing Details
+
+For the cleaning servicethat providers list:
+
+What fields do we need to store? (e.g., title, description, price, duration, service type like "Home", "Office", etc.) - tell me what should be there no clue as of now
+
+Can a provider list multiple services?      - yes
+Should services support packages or add-ons(like Deep Cleaning, Basic Cleaning, Carpet Cleaning)?     -  i will chcek with client
+
+
+
+📍 3. Location & Availability
+
+Will services be location-based(city, pin code, geocoordinates)?        - yes
+Does each provider manually set their service area, or is it auto-detected from their profile?      -no (i will confirm with the client)
+Should providers define working hours / availability slots?         - no (i will confirm with the client)
+
+
+
+📅 4. Booking Flow
+
+What key info do we capture during a booking? (e.g., selected service, date/time, location, status)         - tell me what should be there 
+Are there booking statuses you want to track (e.g., Pending, Accepted, Completed, Cancelled)?       - yes
+Can providers reject/acceptbookings?        - yes
+Should there be payment info stored in the booking model (price, payment status)?       - yes
+
+
+
+📸 5. Photo Upload (Customer side)
+
+Do customers upload multiple imagesof the place?        - yes
+Should these images be stored directly (e.g., S3 URL) or just referenced in the booking?        what to do according to you
+Are the images mandatory for booking?       - yes
+
+
+
+⭐ 6. Review & Rating
+
+Should customers be able to leave a review & ratingafter service completion?        - yes
+Should providers be able to review customers too?       - no
+
+
+
+💳 7. Payments
+
+Will payments happen inside the platform, or is it handled externally/offline?          - inside the platform
+If inside, do we need to track transactionsand refunds?            - yes (there will be an dispute resolutin module as well)
+
+
+
+🛠️ 8. Future Features (will be there now)
+
+Will there be subscription plans for providers or customers?            - yes but for provider or the customer need to know from client and it is present for now not Future
+Any promotions / discount codes?        - yes there will be and it is present for now not Future
+Do you plan to support multi-languageor multi-currencylater?            yes and it is present for now not Future
+
+
+
+before starting with the schema i want to know about the Payment the platform is taking 25% and 75% to the provider + 100% Tips
+
+there will tips as well 
+so how are we going to tackel teh payouts 
+the platform has an option to stop payment refund (every thing which is required in dispute resolutin module)
+
+
+tell me about these ?

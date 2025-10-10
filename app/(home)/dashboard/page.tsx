@@ -46,11 +46,11 @@ const bookings: Booking[] = [
 
 export default function DashboardPage() {
     return (
-        <main className="pt-6 md:pt-8 lg:pt-16 relative min-h-screen bg-white">
-            <div className="relative z-10 container">
+        <main className="relative min-h-screen pt-6 bg-white md:pt-8 lg:pt-16">
+            <div className="container relative z-10">
                 {/* Header */}
                 <header className="mb-8">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
+                    <h1 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
                         My Dashboard
                     </h1>
                     <p className="mt-1 text-gray-500">
@@ -59,7 +59,7 @@ export default function DashboardPage() {
                 </header>
 
                 {/* Top stats */}
-                <section className="grid grid-cols-1 gap-3 sm:gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
+                <section className="grid grid-cols-1 gap-3 mb-6 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <StatCard
                         title="Total Bookings"
                         value="0"
@@ -91,14 +91,14 @@ export default function DashboardPage() {
                     <ActionCard title="Book Service" subtitle="Find and book cleaning services" />
                     <ActionCard title="My Bookings" subtitle="Manage your appointments" />
                     <ActionCard title="Favourites" subtitle="Your saved providers" />
-                    <ActionCard title="My Reviews" subtitle="Rate your experiences" />
+                    <ActionCard title="Messages" subtitle="Chat with service provider" />
                 </section>
 
                 {/* Recent bookings */}
-                <section className="section pb-0">
-                    <div className="sm:flex items-center justify-between mb-4">
+                <section className="pb-0 section">
+                    <div className="items-center justify-between mb-4 sm:flex">
                         <div>
-                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">Recent Bookings</h2>
+                            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">Recent Bookings</h2>
                             <p className="text-sm text-gray-500">
                                 Your latest cleaning service appointments
                             </p>
@@ -119,8 +119,8 @@ export default function DashboardPage() {
                                     key={booking.id}
                                     className="mb-2 overflow-hidden bg-white border shadow-sm rounded-2xl"
                                 >
-                                    <div className="flex sm:items-center gap-3 sm:gap-5 px-5 py-4">
-                                        <div className="relative w-16 h-30 sm:h-16 overflow-hidden ring-1 ring-gray-200">
+                                    <div className="flex gap-3 px-5 py-4 sm:items-center sm:gap-5">
+                                        <div className="relative w-16 overflow-hidden h-30 sm:h-16 ring-1 ring-gray-200">
                                             <Image
                                                 src={booking.image}
                                                 alt={booking.title}
