@@ -18,13 +18,13 @@ export default function StatCard(props: {
 
             <div className="relative z-10 flex items-start justify-between">
                 <div>
-                    <p className="text-sm font-semibold text-gray-900">{title}</p>
-                    <p className="mt-2 text-3xl font-extrabold text-gray-900">{value}</p>
-                    <p className="mt-1 text-xs text-gray-500">{subtitle}</p>
+                    <p className="text-xl font-bold text-gray-900">{title}</p>
+                    <p className="mt-2 text-3xl font-bold text-[#b9903c]">{value}</p>
+                    <p className="mt-1 text-base font-semibold text-gray-500">{subtitle}</p>
                 </div>
 
                 {/* icon bubble */}
-                <div className="grid w-12 h-12 shrink-0 place-items-center rounded-xl">
+                <div className="grid w-12 h-12 shrink-0 place-items-center rounded-xl text-[#b9903c]">
                     {icon}
                 </div>
             </div>

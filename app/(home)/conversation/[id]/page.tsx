@@ -25,7 +25,7 @@ export default async function ConversationDetailPage(props: {
             {/* ===== Main layout ===== */}
             <div className="flex flex-1 gap-4 lg:gap-8 pb-10 mt-6">
                 {/* Chat list with highlight */}
-                <div className="w-1/3 flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh] md:display-block hidden">
+                <div className="w-1/3 flex flex-col overflow-hidden pt-4 border border-gray-100 rounded-xl bg-[#F3F1ED] h-[75vh] md:block hidden">
                     <ChatList chats={chats} />
                 </div>
 

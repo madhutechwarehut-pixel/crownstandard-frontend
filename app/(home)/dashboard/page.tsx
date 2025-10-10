@@ -46,11 +46,11 @@ const bookings: Booking[] = [
 
 export default function DashboardPage() {
     return (
-        <main className="relative min-h-screen bg-white">
-            <div className="relative z-10 px-6 py-8 pb-0 mx-auto max-w-7xl lg:px-8">
+        <main className="pt-6 md:pt-8 lg:pt-16 relative min-h-screen bg-white">
+            <div className="relative z-10 container">
                 {/* Header */}
                 <header className="mb-8">
-                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
                         My Dashboard
                     </h1>
                     <p className="mt-1 text-gray-500">
@@ -59,35 +59,35 @@ export default function DashboardPage() {
                 </header>
 
                 {/* Top stats */}
-                <section className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2 lg:grid-cols-4">
+                <section className="grid grid-cols-1 gap-3 sm:gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
                     <StatCard
                         title="Total Bookings"
                         value="0"
                         subtitle="All time bookings"
-                        icon={<Calendar className="w-10 h-10 text-amber-600" />}
+                        icon={<Calendar className="w-10 h-10 text-[#b9903c]" />}
                     />
                     <StatCard
                         title="Completed Services"
                         value="0"
                         subtitle="Successfully completed"
-                        icon={<Star className="w-10 h-10 text-amber-600" />}
+                        icon={<Star className="w-10 h-10 text-[#b9903c]" />}
                     />
                     <StatCard
                         title="Total Money saved"
                         value="$0.00"
                         subtitle="Lifetime Saving"
-                        icon={<DollarSign className="w-10 h-10 text-amber-600" />}
+                        icon={<DollarSign className="w-10 h-10 text-[#b9903c]" />}
                     />
                     <StatCard
                         title="Favourite Providers"
                         value="0"
                         subtitle="Saved for later"
-                        icon={<Heart className="w-10 h-10 text-amber-600" />}
+                        icon={<Heart className="w-10 h-10 text-[#b9903c]" />}
                     />
                 </section>
 
                 {/* Quick actions */}
-                <section className="grid grid-cols-1 gap-6 mb-10 sm:grid-cols-2 lg:grid-cols-4">
+                <section className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <ActionCard title="Book Service" subtitle="Find and book cleaning services" />
                     <ActionCard title="My Bookings" subtitle="Manage your appointments" />
                     <ActionCard title="Favourites" subtitle="Your saved providers" />
@@ -95,23 +95,23 @@ export default function DashboardPage() {
                 </section>
 
                 {/* Recent bookings */}
-                <section className="mb-24">
-                    <div className="flex items-center justify-between mb-4">
+                <section className="section pb-0">
+                    <div className="sm:flex items-center justify-between mb-4">
                         <div>
-                            <h2 className="text-xl font-semibold text-gray-900">Recent Bookings</h2>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">Recent Bookings</h2>
                             <p className="text-sm text-gray-500">
                                 Your latest cleaning service appointments
                             </p>
                         </div>
                         {bookings.length > 0 && (
-                            <button className="px-4 py-2 text-sm text-gray-700 font-semibold bg-[#F3F1ED] rounded-full hover:bg-[#e0dad0]">
+                            <button className="px-4 py-2 text-sm text-gray-700 font-semibold bg-[#F3F1ED] rounded-full hover:bg-[#e0dad0] mt-2 sm:mt-0">
                                 View All
                             </button>
                         )}
                     </div>
 
                     {/* Single booking row */}
-                    <div className="bg-[#F3F1ED] p-2 py-12 rounded-xl">
+                    <div className="bg-[#F3F1ED] p-2 py-4 sm:py-6 lg:py-12 rounded-xl">
                         {bookings.length > 0 ? (
                             // Booking cards
                             bookings.map((booking) => (
@@ -119,8 +119,8 @@ export default function DashboardPage() {
                                     key={booking.id}
                                     className="mb-2 overflow-hidden bg-white border shadow-sm rounded-2xl"
                                 >
-                                    <div className="flex items-center gap-5 px-5 py-4">
-                                        <div className="relative w-16 h-16 overflow-hidden ring-1 ring-gray-200">
+                                    <div className="flex sm:items-center gap-3 sm:gap-5 px-5 py-4">
+                                        <div className="relative w-16 h-30 sm:h-16 overflow-hidden ring-1 ring-gray-200">
                                             <Image
                                                 src={booking.image}
                                                 alt={booking.title}
@@ -129,7 +129,7 @@ export default function DashboardPage() {
                                             />
                                         </div>
 
-                                        <div className="grid items-center flex-1 grid-cols-1 gap-2 md:grid-cols-5 md:gap-4">
+                                        <div className="grid items-center flex-1 grid-cols-1 gap-1 sm:gap-2 md:grid-cols-5 md:gap-4">
                                             <div className="md:col-span-2">
                                                 <p className="font-semibold leading-tight text-gray-900">
                                                     {booking.title}

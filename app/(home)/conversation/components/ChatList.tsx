@@ -29,7 +29,7 @@ export default function ChatList({
                     }`}
                 />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <p className="font-medium text-gray-900 truncate">{chat.name}</p>
                 <p className="text-sm text-gray-500 truncate">{chat.lastMessage}</p>
               </div>
