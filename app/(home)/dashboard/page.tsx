@@ -73,9 +73,9 @@ export default function DashboardPage() {
                         icon={<Star className="w-10 h-10 text-[#b9903c]" />}
                     />
                     <StatCard
-                        title="Total Spent"
+                        title="Total Money saved"
                         value="$0.00"
-                        subtitle="Lifetime spending"
+                        subtitle="Lifetime Saving"
                         icon={<DollarSign className="w-10 h-10 text-[#b9903c]" />}
                     />
                     <StatCard

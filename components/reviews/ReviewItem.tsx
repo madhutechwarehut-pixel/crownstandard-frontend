@@ -13,6 +13,33 @@ export default function ReviewItem({
   date,
   comment,
 }: ReviewItemProps) {
+
+  const renderStars = () => {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return (
+      <div className="flex items-center text-[#B89029]">
+        {[...Array(fullStars)].map((_, i) => (
+          <Star key={`full-${i}`} className="w-3.5 h-3.5 fill-current" />
+        ))}
+        {hasHalfStar && (
+          <div className="relative w-3.5 h-3.5">
+            <Star className="w-3.5 h-3.5 text-gray-300" />
+            <Star
+              className="absolute left-0 top-0 w-3.5 h-3.5 text-[#B89029] fill-current"
+              style={{ clipPath: "inset(0 50% 0 0)" }}
+            />
+          </div>
+        )}
+        {[...Array(emptyStars)].map((_, i) => (
+          <Star key={`empty-${i}`} className="w-3.5 h-3.5 text-gray-300" />
+        ))}
+      </div>
+    );
+  };
+
   const initials = name
     .split(" ")
     .map((n) => n[0])
@@ -31,20 +58,12 @@ export default function ReviewItem({
           <div className="flex items-center gap-2">
             <p className="text-sm font-semibold text-gray-900">{name}</p>
             <div className="flex items-center gap-1 text-[#B89029]">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-3.5 h-3.5 ${
-                    i < rating ? "fill-current" : "text-gray-300"
-                  }`}
-                />
-              ))}
+              {renderStars()}
             </div>
             <p className="text-xs text-gray-500">
               ({rating.toFixed(1)}) {date}
             </p>
           </div>
-
           <p className="mt-1 text-sm text-gray-500">{comment}</p>
         </div>
       </div>

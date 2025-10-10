@@ -15,6 +15,12 @@ export default function ServiceBookingForm({ service }: { service: NormalizedSer
     const [commonAreas, setCommonAreas] = useState<PreviewFile[]>([]);
     const [flooring, setFlooring] = useState<PreviewFile[]>([]);
     const [bathrooms, setBathrooms] = useState<PreviewFile[]>([]);
+    const [duration, setDuration] = useState<number | 2>(2);
+
+    const inputClass = (isEmpty: boolean) =>
+        `w-full rounded-md border px-3 py-2 text-sm outline-none transition 
+     ${isEmpty ? "border-gray-300 text-gray-400" : "border-gray-400 text-gray-900"}
+     focus:border-[#C5A04B] focus:ring-1 focus:ring-[#C5A04B]`;
 
     // pricing
     const pricing = service.pricing;
@@ -321,22 +327,18 @@ export default function ServiceBookingForm({ service }: { service: NormalizedSer
                                 </LabeledInput>
 
                                 <LabeledInput label="Duration (hours)">
-                                    <select
-                                        defaultValue={minHours}
-                                        className={selectClass(false)}
+                                    <input
+                                        type="number"
+                                        min={1}
+                                        max={24}
+                                        placeholder="Enter hours"
+                                        value={duration}
                                         onChange={(e) => {
-                                            e.currentTarget.className = selectClass(e.currentTarget.value === "");
+                                            const value = e.target.value === "" ? 2 : Number(e.target.value);
+                                            setDuration(value);
                                         }}
-                                    >
-                                        {Array.from({ length: 8 }).map((_, i) => {
-                                            const v = i + 1;
-                                            return (
-                                                <option key={v} value={v} className="text-gray-900">
-                                                    {v}
-                                                </option>
-                                            );
-                                        })}
-                                    </select>
+                                        className={inputClass(duration === 2)}
+                                    />
                                 </LabeledInput>
                             </div>
 
@@ -401,18 +403,18 @@ export default function ServiceBookingForm({ service }: { service: NormalizedSer
                                 <div className="mt-6 rounded-lg border bg-[#F4F1EC] p-4 text-sm">
                                     <div className="flex items-center justify-between pb-3 border-b">
                                         <span>
-                                            Base Price ({minHours}h @ {formatMoney(pricing.amount, pricing.currency)}
+                                            Base Price ({duration || minHours}h @ {formatMoney(pricing.amount, pricing.currency)}
                                             {pricing.unit === PriceUnit.PerHour ? "/h" : "/service"}):
                                         </span>
-                                        <span>{formatMoney(base, pricing.currency)}</span>
+                                        <span>{formatMoney(pricing.amount*duration, pricing.currency)}</span>
                                     </div>
                                     <div className="flex items-center justify-between py-3 border-b">
                                         <span>Subtotal:</span>
-                                        <span>{formatMoney(base, pricing.currency)}</span>
+                                        <span>{formatMoney(pricing.amount*duration, pricing.currency)}</span>
                                     </div>
                                     <div className="flex items-center justify-between pt-3 text-base font-semibold">
                                         <span>Total Price:</span>
-                                        <span>{formatMoney(base, pricing.currency)}</span>
+                                        <span>{formatMoney(pricing.amount*duration, pricing.currency)}</span>
                                     </div>
                                 </div>
 
