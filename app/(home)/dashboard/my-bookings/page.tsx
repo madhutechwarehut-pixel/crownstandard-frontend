@@ -1,9 +1,10 @@
 "use client";
 
 import BookingCard from "@/components/dashboard/bookings/BookingCard";
+import { BookingCus } from "@/types/booking";
 
 export default function MyBookingsPage() {
-  const bookings = [
+  const bookings:BookingCus[] = [
     {
       id: "b1",
       serviceName: "Haircut & Styling",

@@ -1,9 +1,8 @@
+import { BookingCus } from "@/types/booking";
 import { MapPin, CalendarDays, Clock, User, Info } from "lucide-react";
-import { formatMoney } from "@/types/service";
 
-export default function BookingCard({ booking }: { booking: any }) {
+export default function BookingCard({ booking }: { booking: BookingCus }) {
   const isPending = booking.status === "Pending";
-  const isConfirmed = booking.status === "Confirmed";
 
   return (
     <div
@@ -64,10 +63,10 @@ export default function BookingCard({ booking }: { booking: any }) {
       {isPending && (
         <div className="flex flex-col gap-3 pt-4 mt-5 border-t border-gray-200 sm:flex-row sm:items-center sm:justify-between">
           <button className="px-4 py-2 text-sm font-semibold text-red-700 transition bg-red-100 rounded-full hover:bg-red-200">
-            Cancel Booking (${booking.cancelFee.toFixed(2)} Fee)
+            Cancel Booking (${(booking.cancelFee ?? 0).toFixed(2)} Fee)
           </button>
           <p className="text-sm text-red-600">
-            Cancellation fee: ${booking.cancelFee.toFixed(2)} (15% of booking cost)
+            Cancellation fee: (${(booking.cancelFee ?? 0).toFixed(2)} (15% of booking cost)
           </p>
         </div>
       )}

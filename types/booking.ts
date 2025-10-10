@@ -8,3 +8,17 @@ export interface Booking {
   price: string;
   image: string;
 }
+
+export interface BookingCus {
+  id: string;
+  serviceName: string;
+  price: number;
+  currency: string;
+  time: string;
+  duration: string;
+  address: string;
+  provider: string;
+  instruction: string;
+  status: "Pending" | "Confirmed" | "Cancelled"; // optional: limit to known values
+  cancelFee?: number;
+}

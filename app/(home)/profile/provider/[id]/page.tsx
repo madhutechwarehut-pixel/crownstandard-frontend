@@ -8,12 +8,11 @@ import ServiceCard from "@/components/provider/ServiceCard";
 import ReviewItem from "@/components/reviews/ReviewItem";
 
 
-import { DUMMY_SERVICE } from "@/types/service";
-import { DUMMY_REVIEWS } from "@/types/review";
+import { DUMMY_SERVICE, ID } from "@/types/service";
 
 export default function ProviderProfilePage() {
   const [activeTab, setActiveTab] = useState<"services" | "reviews">("services");
-  const services = [DUMMY_SERVICE, { ...DUMMY_SERVICE, id: "svc_002" as any, name: "Move-out Deep Cleaning" }];
+  const services = [DUMMY_SERVICE, { ...DUMMY_SERVICE, id: "svc_002" as ID, name: "Move-out Deep Cleaning" }];
   const reviews = [
     {
       id: "1",
