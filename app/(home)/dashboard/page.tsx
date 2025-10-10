@@ -50,7 +50,7 @@ export default function DashboardPage() {
             <div className="relative z-10 container 3xl:max-w-[1280px]">
                 {/* Header */}
                 <header className="mb-8">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
+                    <h1 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
                         My Dashboard
                     </h1>
                     <p className="mt-1 text-gray-500">
@@ -59,7 +59,7 @@ export default function DashboardPage() {
                 </header>
 
                 {/* Top stats */}
-                <section className="grid grid-cols-1 gap-3 sm:gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
+                <section className="grid grid-cols-1 gap-3 mb-6 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <StatCard
                         title="Total Bookings"
                         value="0"
@@ -91,12 +91,12 @@ export default function DashboardPage() {
                     <ActionCard title="Book Service" subtitle="Find and book cleaning services" />
                     <ActionCard title="My Bookings" subtitle="Manage your appointments" />
                     <ActionCard title="Favourites" subtitle="Your saved providers" />
-                    <ActionCard title="My Reviews" subtitle="Rate your experiences" />
+                    <ActionCard title="Messages" subtitle="Chat with service provider" />
                 </section>
 
                 {/* Recent bookings */}
-                <section className="section pb-0">
-                    <div className="sm:flex items-center justify-between mb-4">
+                <section className="pb-0 section">
+                    <div className="items-center justify-between mb-4 sm:flex">
                         <div>
                             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">Recent Bookings</h2>
                             <p className="text-sm text-gray-500">

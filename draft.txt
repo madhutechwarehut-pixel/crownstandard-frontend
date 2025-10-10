@@ -196,3 +196,20 @@ Project : mosaic-biz-hub Updated Desgin for food/food from shop to look like foo
     9. Replaced dropdown with number input for Duration (hours) using state and matching styles.
     10. Designed and finalized the Pricing Summary section with base, subtotal, and total calculations using formatMoney.
  
+10-10-2025
+
+    1. Finalized unified User model structure with all fields.
+    2. Designed and completed the Service model with isVisible and currency.
+    3. Fully designed the Booking model with OTP verification, pricing snapshot, cancellation policy snapshot, tip summary, payout info, and photos schema.
+    4. Removed scheduleWindowMins and added durationHours to Booking.
+    5. implemented the PhotoSchema logic for before/after cleaning images.
+    6. Ensured currency fields are present in Service, Booking, and tipSummary.
+    7. Provided a complete walkthrough of the Booking lifecycle and logic.
+    8. Prepared to start the PaymentTransaction model next.
+    9. Created a detailed Master Project Prompt to resume work easily in future sessions.
+    10. Implemented Forgot Password flow including model, route, and integration.
+    11. Linked login → customer dashboard and provider login → provider dashboard successfully.
+
+
+
+CrownStandard : Integrated mock data and placeholder states for empty sections, Maintained unified color scheme, spacing, and rounded aesthetics across the dashboard, Created and SubsLayout base layouts with proper background and illustration placement, Set up overall structure for the subscription module under /app/(subs)/choose-plan, Implemented full Choose Your Plan page matching the design, Added gradient background (#1F2937 → #524A39 → #1F2937), Built responsive 3-column plan cards (Basic, Premium, Enterprise), Highlighted the center “Premium” card with darker gradient and scale effect, Styled typography, icons, and buttons to match design hierarchy, Added footer section with sign-in prompt and amber button, Built “Manage Services” page layout and linked it via “View All” button, Created responsive, centered modal component for “Create New Service, Designed “Profile Page” structure for Provider and Customer roles.

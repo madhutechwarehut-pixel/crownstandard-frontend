@@ -59,6 +59,7 @@ export default function Header() {
             <Link href="/how-to-get-started" className="hover:text-cs-gold">Get Started</Link>
             <Link href="/about" className="hover:text-cs-gold">About</Link>
             <Link href="/services" className="hover:text-cs-gold">Services</Link>
+            <Link href="/contact" className="hover:text-cs-gold">Contact</Link>
           </nav>
 
           {/* Desktop auth */}

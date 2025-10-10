@@ -1,0 +1,47 @@
+📦 Core Models (Main Entities)
+
+1. User – Stores all users (Admin, Service Provider, Customer) with role-based details.
+2. ServiceCategory – Categories like "Home Cleaning", "Office Cleaning", etc.
+3. Service – Individual cleaning services listed by providers.
+4. Booking – All customer bookings with schedule, photos, status, etc.
+
+
+
+💳 Payment & Finance Models
+
+5. PaymentTransaction – Payment details for bookings (customer → platform).
+6. TipTransaction – Tip payments (customer → provider).
+7. Payout – Records payouts to providers (base + tips after commission).
+8. Dispute – Dispute details, resolution, evidence, refund info, etc.
+
+
+
+⭐ Engagement & Growth Models
+
+9. Review – Customer reviews & ratings after completion.
+10. Coupon – Promo codes and discount campaigns.
+11. Subscription – Subscription plans for providers (priority listing, unlimited services, etc.).
+
+
+
+📄 Supporting / Utility Models
+
+12. Invoice – Booking invoice details (customer, provider, taxes, total, etc.).
+13. ChatThread – Chat sessions between customer and provider.
+14. ChatMessage – Individual messages exchanged within a chat thread.
+
+
+
+🔔 System & Admin Models
+
+15. Notification – Stores in-app / push notifications for users.
+16. AuditLog – Tracks admin/system actions (like payout holds, dispute updates, etc.).
+
+
+
+✅ Total Models: 16
+This is the complete list — and this covers 100% of your app’s needs (MVP + growth + admin tools).
+
+
+
+Would you like me to start with the `User` model (in JavaScript with Mongoose)? (Recommended as step 1 🚀)
